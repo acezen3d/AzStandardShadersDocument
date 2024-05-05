@@ -22,8 +22,7 @@
 - EmissionIntensity
 - NormalMapScale 
 - DetailAlbedoMapScale
-- ShadowlessColor
-- ShadowIntensity
+- DummyAmbient 
 - IndirectDiffuseIntensity
 - IndirectSpecularIntensity
 

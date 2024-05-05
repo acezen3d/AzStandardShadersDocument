@@ -7,12 +7,11 @@
   - [Note](#note)
 
 ## Properties Name Changed
-- ShadowPower -> ShadowIntensity
 - AddColor -> Color
 - SpecularPower -> Glossiness (some KKUSS shaders use `Glossiness`, some others use `SpecularPower`)
 
 ## Properties Added (Generally)
-- ShadowlessColor
+- DummyAmbient
 - IndirectDiffuseIntensity (separated from Occlusion)
 - IndirectSpecularIntensity (separated from Occlusion)
 - EmissionMap
@@ -20,6 +19,7 @@
 - EmissionIntensity
 
 ## Properties Removed
+- ShadowPower
 - Emission
 - Occlusion
 
