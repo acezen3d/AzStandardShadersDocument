@@ -1,5 +1,5 @@
 # Az Standard Shaders
-v2.0.0 / Acezen
+v2.0.0, Acezen
 
 - [Az Standard Shaders](#az-standard-shaders)
   - [Introduction](#introduction)
@@ -101,7 +101,7 @@ The purpose of using `ShadowIntensity` and `ShadowlessColor` is just getting som
 In order to simplify the fake indirect lighting logic and implement it similar to Unity ambient light (https://docs.unity3d.com/ScriptReference/RenderSettings-ambientLight.html), I removed `ShadowIntensity` and `ShadowlessColor`, added `DummyAmbient` which basically imitates Unity's ambient light.
 
 ## Known Issues
-- `Material Editor` used a sRGB color space uncompressed normal map as the default value for normal map properties, which is wrong. But I can't make a normal map property defaults with an explicit texture, because this will ruin `Material Editor`'s optimization mechanism for texture sharing between shaders. Therefore, remember to assign an empty normal map to any unassigned normal map properties.
+- ~~`Material Editor` used a sRGB color space uncompressed normal map as the default value for normal map properties, which is wrong. But I can't make a normal map property defaults with an explicit texture, because this will ruin `Material Editor`'s optimization mechanism for texture sharing between shaders. Therefore, remember to assign an empty normal map to any unassigned normal map properties.~~ Thanks to `Rikki Balboa`, `Material Editor` has now been fixed (https://github.com/IllusionMods/KK_Plugins/releases/tag/v253) to provide correct default texture for normal maps and automatically convert OpenGL normal maps.
 
 ## Download
 [https://mega.nz/folder/CYtRjKBQ#1SvoZEZCnLxuPs5q56P5Ww](https://mega.nz/folder/CYtRjKBQ#1SvoZEZCnLxuPs5q56P5Ww)
