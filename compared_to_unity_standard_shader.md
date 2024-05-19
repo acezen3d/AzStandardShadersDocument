@@ -13,6 +13,8 @@
 - BumpScale -> NormalMapScale
 - DetailNormalMap -> NormalMapDetail
 - DetailAlbedoMap -> AlbedoMapDetail
+- SrcBlend -> BlendSrc
+- DstBlend -> BlendDst
 
 ## Properties Added (Generally)
 - AlphaMask
@@ -20,11 +22,28 @@
 - alpha_b (hided)
 - Metallic (used with MetallicGlossMap)
 - EmissionIntensity
-- NormalMapScale 
 - DetailAlbedoMapScale
 - DummyAmbient 
 - IndirectDiffuseIntensity
 - IndirectSpecularIntensity
+- DrawnMap
+- DrawnMapSpecularStrength
+- DrawnMapShadowStrength
+- Two detail sets properties:
+  - NormalMapDetail2
+  - DetailNormalMapScale2
+  - AlbedoMapDetail2
+  - DetailAlbedoMapScale2
+  - MetallicGlossMapDetail
+  - DetailMetallic
+  - DetailGlossiness
+  - MetallicGlossMapDetail2
+  - DetailMetallic2
+  - DetailGlossiness2
+  - OcclusionMapDetail
+  - DetailOcclusionStrength
+  - OcclusionMapDetail2
+  - DetailOcclusionStrength2
 
 ## Properties Removed
 - ParallaxMap
