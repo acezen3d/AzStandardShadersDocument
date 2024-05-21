@@ -94,3 +94,5 @@
 | OverTex1NormalMapScale                          | Float(0,1) | 1             | `OverTex1NormalMap` scale.                                                                                                                         |
 | ***Shader Command Properties***                 |            |               |                                                                                                                                                    |
 | Cull                                            | Enum(0-2)  | 0             | Face culling, 0 - cull off, 1 - cull front, 2 - cull back.                                                                                         |
+| ***Shader Keywords***                           |            |               |                                                                                                                                                    |
+| [Detail Keywords](detail_keywords.md)           |            |               |                                                                                                                                                    |

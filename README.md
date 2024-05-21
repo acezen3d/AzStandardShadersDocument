@@ -1,5 +1,5 @@
 # Az Standard Shaders
-v2.1.0, Acezen
+v2.2.0, Acezen
 
 - [Az Standard Shaders](#az-standard-shaders)
   - [Introduction](#introduction)
@@ -72,6 +72,7 @@ I've been making MMD videos in Koikatsu (Sunshine) using `Haruka`'s KKUSS shader
 - `DummyAmbient` also uses `OcclusionMap`, which is the same as Unity’s ambient light.
 - KKUSS's original `Occlusion` was used to control both the diffuse and specular terms of the real indirect lighting, so if you've used that property you know what I'm talking about. Now I've separated this property into two parts, `IndirectDiffuseIntensity` and `IndirectSpecularIntensity`, to make it easier to adjust these two terms separately.
 - I made two versions for Koikatsu and Koikatsu Sunshine to solve rendering problems caused by different Unity versions. For example, using KKUSS shaders in Koikatsu Sunshine, the point light is rendered inverted when it has a reasonable range value, i.e. the illuminated area is darker and the shaded area is brighter. Az Standard shader for Koikatsu Sunshine does not have this problem.
+- Az Standard shaders fix the issue in KKUSS where a rectangular bounding box would appear in the illuminated area when using spot or point lights with a reasonable range.
 - Az Standard shaders have tessellation variants to increase the level of detail of objects.
 - Az Standard shaders support the Koikatsu’s original `DetailMask` with a preprocessed approach.
 - ...
@@ -117,8 +118,9 @@ In order to simplify the fake indirect lighting logic and implement it similar t
 - ~~`Material Editor` used a sRGB color space uncompressed normal map as the default value for normal map properties, which is wrong. But I can't make a normal map property defaults with an explicit texture, because this will ruin `Material Editor`'s optimization mechanism for texture sharing between shaders. Therefore, remember to assign an empty normal map to any unassigned normal map properties.~~ Thanks to `Rikki Balboa`, `Material Editor` has now been fixed (https://github.com/IllusionMods/KK_Plugins/releases/tag/v253) to provide correct default texture for normal maps and automatically convert OpenGL normal maps.
 
 ## Notes
-- Albedo stack order: (Underlay & Overlay )ed -> `MainTex` -> ( `ColorMask` ) -> `DrawnMap` -> `Detail Albedo 1 & 2`.
+- Albedo stack order: (Underlay & Overlay)ed `MainTex` -> ( `ColorMask` ) -> `DrawnMap` -> `Detail Albedo 1 & 2`.
 - Since `MetallicGlossMap` uses ***red*** and ***blue*** channels, while `OcclusionMap` uses ***green*** channel, so two of them can be packed into one texture.
+- [Texture maps color space](texture_maps_color_space.md).
 
 ## Download
 [https://mega.nz/folder/CYtRjKBQ#1SvoZEZCnLxuPs5q56P5Ww](https://mega.nz/folder/CYtRjKBQ#1SvoZEZCnLxuPs5q56P5Ww)

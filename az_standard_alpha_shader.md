@@ -87,6 +87,8 @@
 | BlendSrc                                        | Enum(0-10), see below | 5             | Source (current color) blend mode.                                                                                                                 |
 | BlendDst                                        | Enum(0-10), see below | 10            | Destination (frame buffer) blend mode.                                                                                                             |
 | ZWrite                                          | Enum(0-1)             | 1             | Whether to update the depth buffer.                                                                                                                |
+| ***Shader Keywords***                           |                       |               |                                                                                                                                                    |
+| [Detail Keywords](detail_keywords.md)           |                       |               |                                                                                                                                                    |
 
 ## Blend Mode Enum
 | Value | Enum             | Description                                        |
