@@ -6,7 +6,7 @@
   - [Koikatsu Shader Property Support](#koikatsu-shader-property-support)
   - [Properties](#properties)
   - [Blend Mode Enum](#blend-mode-enum)
-  - [Note](#note)
+  - [Notes](#notes)
 
 ## Koikatsu Target Shader
 - Shader Forge/main_item(referred as it had an alpha variant)
@@ -105,10 +105,10 @@
 | 9     | SrcAlphaSaturate | Blend factor is (f,f,f,1); where f = min(As,1-Ad). |
 | 10    | OneMinusSrcAlpha | Blend factor is (1-As,1-As,1-As,1-As).             |
 	
-## Note
-The most common alpha blending shader property settings:
-- Cutoff: 0 
-- Cull: 2
-- BlendSrc: 5
-- BlendDst: 10
-- ZWrite: 0
+## Notes
+- The most common alpha blending shader property settings:
+  - Cutoff: 0 
+  - Cull: 2
+  - BlendSrc: 5
+  - BlendDst: 10
+  - ZWrite: 0

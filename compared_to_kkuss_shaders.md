@@ -4,7 +4,7 @@
   - [Properties Name Changed](#properties-name-changed)
   - [Properties Added (Generally)](#properties-added-generally)
   - [Properties Removed](#properties-removed)
-  - [Note](#note)
+  - [Notes](#notes)
 
 ## Properties Name Changed
 - AddColor -> Color
@@ -40,5 +40,5 @@
 - Emission
 - Occlusion
 
-## Note
+## Notes
 - What are compared here is only shader properties introduced by KKUSS, and all Koikatsu built-in shader properties are ignored here.

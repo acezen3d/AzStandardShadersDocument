@@ -5,7 +5,7 @@
   - [Properties Added (Generally)](#properties-added-generally)
   - [Properties Removed](#properties-removed)
   - [Properties Hided](#properties-hided)
-  - [Note](#note)
+  - [Notes](#notes)
 
 ## Properties Name Changed
 - (Glossiness, GlossMapScale) -> Glossiness
@@ -59,7 +59,7 @@
 - SpecularHighlights
 - GlossyReflections
 
-## Note
+## Notes
 - The parallax has been removed because it is not common used.
 - The lightmapping feature has been removed, as has the meta pass. Therefore these shaders cannot be used for light baking in Unity.
 - The deferred pass code has also been modified so that these shaders could theoretically be used in the deferred rendering path.
