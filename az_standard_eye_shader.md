@@ -15,7 +15,7 @@
 - Cull: [property]
 - SrcBlend: SrcAlpha
 - DstBlend: OneMinusSrcAlpha
-- ZWrite: Off
+- ZWrite: [property]
 - Keywords: _ALPHABLEND_ON
 - Queue: Transparent
 
@@ -67,3 +67,4 @@
 | [Lighting Properties](lighting_properties.md)   |             |               |                                                                                        |
 | ***Shader Command Properties***                 |             |               |                                                                                        |
 | Cull                                            | Enum(0-2)   | 0             | Face culling, 0 - cull off, 1 - cull front, 2 - cull back.                             |
+| ZWrite                                          | Enum(0-1)   | 0             | Whether to update the depth buffer.                                                    |
