@@ -1,6 +1,6 @@
-# Az/StandardAlpha Shader
+# Az/StandardAlphaAlt Shader
 
-- [Az/StandardAlpha Shader](#azstandardalpha-shader)
+- [Az/StandardAlphaAlt Shader](#azstandardalphaalt-shader)
   - [Koikatsu Target Shader](#koikatsu-target-shader)
   - [Setup](#setup)
   - [Koikatsu Shader Property Support](#koikatsu-shader-property-support)
@@ -18,8 +18,8 @@
 - SrcBlend: [property]     
 - DstBlend: [property]     
 - ZWrite: [property]     
-- Keywords: _ALPHABLEND_ON 
-- Queue: Transparent    
+- Keywords: _ALPHAPREMULTIPLY_ON
+- Queue: Transparent
 
 ## Koikatsu Shader Property Support
 | Property                  | Supported? o: yes, x: no, !: changed                                     |
@@ -83,7 +83,7 @@
 | [Lighting Properties](lighting_properties.md)   |                                                       |               |                                                                                                                                                    |
 | ***Shader Command Properties***                 |                                                       |               |                                                                                                                                                    |
 | Cull                                            | Enum(0-2)                                             | 0             | Face culling, 0 - cull off, 1 - cull front, 2 - cull back.                                                                                         |
-| BlendSrc                                        | Enum(0-10), see [Blend Mode Enum](blend_mode_enum.md) | ***5****      | Source (current color) blend mode.                                                                                                                 |
+| BlendSrc                                        | Enum(0-10), see [Blend Mode Enum](blend_mode_enum.md) | ***1****      | Source (current color) blend mode.                                                                                                                 |
 | BlendDst                                        | Enum(0-10), see [Blend Mode Enum](blend_mode_enum.md) | ***10****     | Destination (frame buffer) blend mode.                                                                                                             |
 | ZWrite                                          | Enum(0-1)                                             | 1             | Whether to update the depth buffer.                                                                                                                |
 | ***Shader Keywords***                           |                                                       |               |                                                                                                                                                    |
@@ -92,9 +92,9 @@
 *: Explicit default value
 
 ## Notes
-- The most common alpha blending shader property settings:
+- The most common premultiplied alpha blending shader property settings:
   - Cutoff: 0 
   - Cull: 2
-  - BlendSrc: 5
+  - BlendSrc: 1
   - BlendDst: 10
   - ZWrite: 0

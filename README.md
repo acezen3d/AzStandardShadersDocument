@@ -1,5 +1,5 @@
 # Az Standard Shaders
-v2.3.0, Acezen
+v2.4.0, Acezen
 
 - [Az Standard Shaders](#az-standard-shaders)
   - [Introduction](#introduction)
@@ -24,41 +24,41 @@ I've been making MMD videos in Koikatsu (Sunshine) using `Haruka`'s KKUSS shader
 ## Shader Correspondence
 
 ### Main Shaders
-| Az Standard       | KKUSS      | Koikatsu built-in                   | KK Plus                       |
-| ----------------- | ---------- | ----------------------------------- | ----------------------------- |
-| Az/StandardSkin   | KKUSS      | Shader Forge/main_skin              | xukmi/SkinPlus                |
-|                   |            | Koikano/main_skin                   |                               |
-| Az/StandardEye    | -          | Shader Forge/toon_eye_lod0          | xukmi/EyePlus                 |
-|                   |            | Koikano/main_eye                    |                               |
-| Az/StandardEyeW   | -          | Shader Forge/toon_eyew_lod0         | xukmi/EyeWPlus                |
-|                   |            | Koikano/main_eyew                   |                               |
-| Az/StandardHair   | KKUSShair  | Shader Forge/main_hair              | xukmi/HairPlus                |
-|                   |            | Shader Forge/main_hair_front        | xukmi/HairFrontPlus           |
-|                   |            | Koikano/hair_main_sun               |                               |
-|                   |            | Koikano/hair_main_front             |                               |
-| Az/StandardCutoff | KKUSSitem  | Shader Forge/main_item              | xukmi/MainItemPlus            |
-|                   |            | Shader Forge/main_item_studio       | xukmi/MainItemStudioPlus      |
-|                   |            | Shader Forge/main_opaque            | xukmi/MainOpaquePlus          |
-|                   |            | Shader Forge/main_opaque2           |                               |
-| Az/StandardAlpha  | KKUSSalpha | Shader Forge/main_item_studio_alpha | xukmi/MainItemAlphaPlus       |
-|                   |            | Shader Forge/main_alpha             | xukmi/MainItemStudioAlphaPlus |
-|                   |            |                                     | xukmi/MainAlphaPlus           |
+| Az Standard                 | KKUSS      | Koikatsu built-in                   | KK Plus                       |
+| --------------------------- | ---------- | ----------------------------------- | ----------------------------- |
+| Az/StandardSkin             | KKUSS      | Shader Forge/main_skin              | xukmi/SkinPlus                |
+|                             |            | Koikano/main_skin                   |                               |
+| Az/StandardEye              | -          | Shader Forge/toon_eye_lod0          | xukmi/EyePlus                 |
+|                             |            | Koikano/main_eye                    |                               |
+| Az/StandardEyeW             | -          | Shader Forge/toon_eyew_lod0         | xukmi/EyeWPlus                |
+|                             |            | Koikano/main_eyew                   |                               |
+| Az/StandardHair             | KKUSShair  | Shader Forge/main_hair              | xukmi/HairPlus                |
+|                             |            | Shader Forge/main_hair_front        | xukmi/HairFrontPlus           |
+|                             |            | Koikano/hair_main_sun               |                               |
+|                             |            | Koikano/hair_main_front             |                               |
+| Az/StandardCutoff           | KKUSSitem  | Shader Forge/main_item              | xukmi/MainItemPlus            |
+|                             |            | Shader Forge/main_item_studio       | xukmi/MainItemStudioPlus      |
+|                             |            | Shader Forge/main_opaque            | xukmi/MainOpaquePlus          |
+|                             |            | Shader Forge/main_opaque2           |                               |
+| &#x250C;Az/StandardAlpha    | KKUSSalpha | Shader Forge/main_item_studio_alpha | xukmi/MainItemAlphaPlus       |
+| &#x2514;Az/StandardAlphaAlt |            | Shader Forge/main_alpha             | xukmi/MainItemStudioAlphaPlus |
+|                             |            |                                     | xukmi/MainAlphaPlus           |
 
 ### Tessellation Variant Shaders
-| Az Standard           | KK Plus                           |
-| --------------------- | --------------------------------- |
-| Az/StandardSkinTess   | xukmi/SkinPlusTess                |
-| Az/StandardEyeTess    | xukmi/EyePlusTess                 |
-| Az/StandardEyeWTess   | xukmi/EyeWPlusTess                |
-| Az/StandardHairTess   | xukmi/HairPlusTess                |
-|                       | xukmi/HairFrontPlusTess           |
-| Az/StandardCutoffTess | xukmi/MainItemPlusTess            |
-|                       | xukmi/MainItemStudioPlusTess      |
-|                       | xukmi/MainOpaquePlusTess          |
-| Az/StandardAlphaTess  | xukmi/MainItemAlphaPlusTess       |
-|                       | xukmi/MainItemStudioAlphaPlusTess |
-|                       | xukmi/MainAlphaPlusTess           |
-| Az/StandardDebugTess  | xukmi/Debug/WireframeTess         |
+| Az Standard                     | KK Plus                           |
+| ------------------------------- | --------------------------------- |
+| Az/StandardSkinTess             | xukmi/SkinPlusTess                |
+| Az/StandardEyeTess              | xukmi/EyePlusTess                 |
+| Az/StandardEyeWTess             | xukmi/EyeWPlusTess                |
+| Az/StandardHairTess             | xukmi/HairPlusTess                |
+|                                 | xukmi/HairFrontPlusTess           |
+| Az/StandardCutoffTess           | xukmi/MainItemPlusTess            |
+|                                 | xukmi/MainItemStudioPlusTess      |
+|                                 | xukmi/MainOpaquePlusTess          |
+| &#x250C;Az/StandardAlphaTess    | xukmi/MainItemAlphaPlusTess       |
+| &#x2514;Az/StandardAlphaAltTess | xukmi/MainItemStudioAlphaPlusTess |
+|                                 | xukmi/MainAlphaPlusTess           |
+| Az/StandardDebugTess            | xukmi/Debug/WireframeTess         |
 
 ## Features
 
@@ -78,11 +78,11 @@ I've been making MMD videos in Koikatsu (Sunshine) using `Haruka`'s KKUSS shader
 - ...
 
 ### Specific
-- Except for `Az/StandardEye(Tess)` and `Az/StandardEyeW(Tess)`, the remaining shaders support two sets of detail map and level control, for almost all PBR properties.
+- Except for `Az/StandardEye` and `Az/StandardEyeW`, the remaining shaders support two sets of detail map and level control, for almost all PBR properties.
 - `Az/StandardSkin` shader has two properties added: `OverTex1NormalMap` and `OverTex1NormalMapScale`, so that users can add an extra normal map to nipples (of the body) and lipstick (of the face) for details.
 - `Az/StandardEyeW` shader is now rendered in alpha blend mode, so that users can draw more realistic gradient eyeshadows or anything like that  directly on eyelines (`eye_line_up/cage/down`).
 - `Az/StandardEyeW` shader has property `Cull` added, adjusting it to 0 (cull off) allows us to see the eyebrows from behind.
-- `Az/StandardAlpha` shader uses semitransparent shadows by dithering.
+- `Az/StandardAlpha`, `Az/StandardAlphaAlt` shaders use semitransparent shadows by dithering.
 
 ## Shader Documents
 
@@ -93,6 +93,7 @@ I've been making MMD videos in Koikatsu (Sunshine) using `Haruka`'s KKUSS shader
 - [Az/StandardHair](az_standard_hair_shader.md)
 - [Az/StandardCutoff](az_standard_cutoff_shader.md)
 - [Az/StandardAlpha](az_standard_alpha_shader.md)
+- [Az/StandardAlphaAlt](az_standard_alpha_alt_shader.md)
 
 ### Tessellation Variant Shaders
 - [Az/StandardSkinTess](az_standard_skin_tess_shader.md)
@@ -101,6 +102,7 @@ I've been making MMD videos in Koikatsu (Sunshine) using `Haruka`'s KKUSS shader
 - [Az/StandardHairTess](az_standard_hair_tess_shader.md)
 - [Az/StandardCutoffTess](az_standard_cutoff_tess_shader.md)
 - [Az/StandardAlphaTess](az_standard_alpha_tess_shader.md)
+- [Az/StandardAlphaAltTess](az_standard_alpha_alt_tess_shader.md)
 - [Az/StandardDebugTess](az_standard_debug_tess_shader.md)
 
 ## Upgrade Info
@@ -120,7 +122,7 @@ In order to simplify the fake indirect lighting logic and implement it similar t
 ## Notes
 - Albedo stack order: (Underlay & Overlay)ed `MainTex` -> ( `ColorMask` ) -> `DrawnMap` -> `Detail Albedo 1 & 2`.
 - Since `MetallicGlossMap` uses ***red*** and ***blue*** channels, while `OcclusionMap` uses ***green*** channel, so two of them can be packed into one texture.
-- [Texture maps color space](texture_maps_color_space.md).
+- [Texture Maps Color Space](texture_maps_color_space.md).
 
 ## Download
 [https://mega.nz/folder/CYtRjKBQ#1SvoZEZCnLxuPs5q56P5Ww](https://mega.nz/folder/CYtRjKBQ#1SvoZEZCnLxuPs5q56P5Ww)
