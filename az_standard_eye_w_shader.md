@@ -31,16 +31,23 @@
 | Cutoff                   | o                                    |
 
 ## Properties
-| Name                                            | Type       | Default Value | Description                                                                        |
-| ----------------------------------------------- | ---------- | ------------- | ---------------------------------------------------------------------------------- |
-| ***Alpha Clip Properties***                     |            |               |                                                                                    |
-| Cutoff                                          | Float(0,1) | 0.5           | Alpha clip threshold value. Pixels with an alpha value below this will be clipped. |
-| ***Basic PBR Properties***                      |            |               |                                                                                    |
-| [Basic PBR Properties](basic_pbr_properties.md) |            |               |                                                                                    |
-| ***Lighting Properties***                       |            |               |                                                                                    |
-| [Lighting Properties](lighting_properties.md)   |            |               |                                                                                    |
-| ***Shader Command Properties***                 |            |               |                                                                                    |
-| Cull                                            | Enum(0-2)  | 0             | Face culling, 0 - cull off, 1 - cull front, 2 - cull back.                         |
-| ZWrite                                          | Enum(0-1)  | ***0****      | Whether to update the depth buffer.                                                |
+| Name                                                             | Type       | Default Value | Description                                                                        |
+| ---------------------------------------------------------------- | ---------- | ------------- | ---------------------------------------------------------------------------------- |
+| ***Alpha Clip Properties***                                      |            |               |                                                                                    |
+| Cutoff                                                           | Float(0,1) | 0.5           | Alpha clip threshold value. Pixels with an alpha value below this will be clipped. |
+| ***Basic PBR Properties***                                       |            |               |                                                                                    |
+| [Basic PBR Properties](basic_pbr_properties.md)                  |            |               |                                                                                    |
+| ***Lighting Properties***                                        |            |               |                                                                                    |
+| [Lighting Properties](lighting_properties.md)                    |            |               |                                                                                    |
+| ***Tessellation Properties***                                    |            |               |                                                                                    |
+| [Tessellation Properties](tessellation_properties.md#properties) |            |               |                                                                                    |
+| ***Displacement Properties***                                    |            |               |                                                                                    |
+| [Displacement Properties](displacement_properties.md#properties) |            |               |                                                                                    |
+| ***Shader Command Properties***                                  |            |               |                                                                                    |
+| Cull                                                             | Enum(0-2)  | 0             | Face culling, 0 - cull off, 1 - cull front, 2 - cull back.                         |
+| ZWrite                                                           | Enum(0-1)  | ***0****      | Whether to update the depth buffer.                                                |
+| ***Shader Keywords***                                            |            |               |                                                                                    |
+| [Tessellation Keywords](tessellation_properties.md#keywords)     |            |               |                                                                                    |
+| [Displacement Keywords](displacement_properties.md#keywords)     |            |               |                                                                                    |
 
 *: Explicit default value

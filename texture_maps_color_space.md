@@ -22,10 +22,16 @@ The indication of the color space they are in is provided as a reference for use
 | MetallicGlossMapDetail2 | Linear      |                                               |
 | OcclusionMapDetail      | Linear      |                                               |
 | OcclusionMapDetail2     | Linear      |                                               |
-| ***Other***             |             |                                               |
-| DrawnMap                | Gamma       | Consistent with the game.                     |
+| ***Tessellation***      |             |                                               |
+| TessSmoothMap           | Linear      |                                               |
+| ***Displacement***      |             |                                               |
+| DisplaceMap             | Linear      |                                               |
+| ***Alpha Clip***        |             |                                               |
 | AlphaMask               | Gamma       | Consistent with the game, even if it's wrong. |
+| ***Koikatsu***          |             |                                               |
+| DrawnMap                | Gamma       | Consistent with the game.                     |
 | ColorMask               | Gamma       | Consistent with the game, even if it's wrong. |
 | overtex1/2/3            | Gamma       |                                               |
 | expression              | Gamma       |                                               |
+| ***Extra***             |             |                                               |
 | OverTex1NormalMap       | Linear      | No conversion required.                       |

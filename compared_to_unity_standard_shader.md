@@ -29,21 +29,9 @@
 - DrawnMap
 - DrawnMapSpecularStrength
 - DrawnMapShadowStrength
-- Two detail sets properties:
-  - NormalMapDetail2
-  - DetailNormalMapScale2
-  - AlbedoMapDetail2
-  - DetailAlbedoMapScale2
-  - MetallicGlossMapDetail
-  - DetailMetallic
-  - DetailGlossiness
-  - MetallicGlossMapDetail2
-  - DetailMetallic2
-  - DetailGlossiness2
-  - OcclusionMapDetail
-  - DetailOcclusionStrength
-  - OcclusionMapDetail2
-  - DetailOcclusionStrength2
+- Detail properties
+- Tessellation properties
+- Displacement properties
 
 ## Properties Removed
 - ParallaxMap
