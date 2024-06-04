@@ -1,5 +1,5 @@
 # Az Standard Shaders
-v3.0.0, Acezen
+v3.1.0, Acezen
 
 - [Az Standard Shaders](#az-standard-shaders)
   - [Introduction](#introduction)
