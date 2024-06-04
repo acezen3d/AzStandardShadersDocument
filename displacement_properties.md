@@ -17,10 +17,6 @@
 ## Keywords
 
 ### DISPLACEMENT
-**Off**
+**Off**: Disable the displacement. ***Default***.
 
-Disable the displacement.
-
-**On**
-
-Enable the displacement.
+**On**: Enable the displacement.

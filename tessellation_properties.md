@@ -18,10 +18,6 @@
 ## Keywords
 
 ### TESSELLATION
-**Off**
+**Off**: Disable the tessellation. ***Default***.
 
-Disable the tessellation.
-
-**On**
-
-Enable the tessellation.
+**On**: Enable the tessellation.

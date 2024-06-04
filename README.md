@@ -1,5 +1,5 @@
 # Az Standard Shaders
-v3.1.0, Acezen
+v3.2.0, Acezen
 
 - [Az Standard Shaders](#az-standard-shaders)
   - [Introduction](#introduction)
@@ -92,7 +92,7 @@ As I was adding the new displacement feature, I considered that there are actual
  
 Of course, there is the old-fashion way, that is the combinations of features. For example, if I have two features A and B, I need to create four shaders: *!A-!B*, *A-!B*, *!A-B*, *A-B*. This way, when I need certain features, I can just use the corresponding shader. This is how previous versions have handled the tessellation feature. If I want to add a third feature C at this time, I will need to create eight shaders: *!A-!B-!C*, *!A-!B-C*, *A-!B-!C*, *A-!B-C*, *!A-B-!C*, *!A-B-C*, *A-B-C*, *A-B-!C*, which means that the number of shaders doubles with each feature added. This is very inconvenient for users and for me to maintain the code.
 
-Fortunately, `Material Editor` v3.3.0 has officially added support for the Unity's shader keywords, more info about [Shader Keywords](https://docs.unity3d.com/Manual/shader-keywords.html). This allows us to turn different features into keywords to enable and disable them.In addition, we can also make some selective calculations, such as the keywords added in v2.2.0. The only downside to doing this is that it will cause more shader variants to be compiled and the size of the mod will be larger, but Unity will choose different variants at runtime based on the keywords to save performance, which is a typical space-for-time treatment. Of course it also helps me maintain the code, after all I don't have to do feature combinations.
+Fortunately, `Material Editor` v3.3.0 has officially added support for the Unity's shader keywords, more info about [Shader Keywords](https://docs.unity3d.com/Manual/shader-keywords.html). This allows us to turn different features into keywords to enable and disable them. ~~In addition, we can also make some selective calculations, such as the keywords added in v2.2.0.~~ The only downside to doing this is that it will cause more shader variants to be compiled and the size of the mod will be larger, but Unity will choose different variants at runtime based on the keywords to save performance, which is a typical space-for-time treatment. Of course it also helps me maintain the code, after all I don't have to do feature combinations.
 
 Based on the benefits of the shader keyword described above, I merge out the tessellation variant shaders introduced in v1.1.0, add `TESSELLATION` and `DISPLACEMENT` keywords to enable or disable the corresponding features.
 
