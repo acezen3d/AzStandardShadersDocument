@@ -27,7 +27,7 @@
 | DetailAlbedoMapScale        | Float(0,1) | 0                 | Detail albedo map scale 1.                                                                                                                 |
 | AlbedoMapDetail2            | Texture    | white             | Detail albedo map 2, no need to be a greyscale but a color texture.                                                                        |
 | DetailAlbedoMapScale2       | Float(0,1) | 0                 | Detail albedo map scale 2.                                                                                                                 |
-| DetailAlbedoDouble          | Float(0,1) | 0                 | See [Additional Property Description/DetailAlbedoDouble](#detailalbedodouble)                                                              |
+| DetailAlbedoDouble          | Float(0,1) | 0                 | See [Additional Property Description/DetailAlbedoDouble](#detailalbedodouble).                                                             |
 | ***Metallic & Glossiness*** |            |                   |                                                                                                                                            |
 | MetallicGlossMapDetail      | Texture    | white             | Detail metallic and glossiness map 1, metallic - ***blue***, glossiness - ***red***.                                                       |
 | DetailMetallic              | Float(0,1) | 0                 | Detail metallic 1. Works with `MetallicGlossMap`, `Metallic`, `MetallicGlossMapDetail`.                                                    |
@@ -35,7 +35,7 @@
 | MetallicGlossMapDetail2     | Texture    | white             | Detail metallic and glossiness map 2, metallic - ***blue***, glossiness - ***red***.                                                       |
 | DetailMetallic2             | Float(0,1) | 0                 | Detail metallic 2. Works with `MetallicGlossMap`, `Metallic`, `MetallicGlossMapDetail2`.                                                   |
 | DetailGlossiness2           | Float(0,1) | 0                 | Detail glossiness 2. Works with `MetallicGlossMap`, `Glossiness`, `MetallicGlossMapDetail2`.                                               |
-| DetailMetallicGlossDouble   | Float(0,1) | 1                 | See [Additional Property Description/DetailMetallicGlossDouble](#detailmetallicglossdouble)                                                |
+| DetailMetallicGlossDouble   | Float(0,1) | 1                 | See [Additional Property Description/DetailMetallicGlossDouble](#detailmetallicglossdouble).                                               |
 | ***Occlusion***             |            |                   |                                                                                                                                            |
 | OcclusionMapDetail          | Texture    | white             | Detail ambient occlusion map 1. The ***green*** channel is used.                                                                           |
 | DetailOcclusionStrength     | Float(0,1) | 0                 | Detail ambient occlusion strength 1. Works with `OcclusionMap`, `OcclusionStrength`, `OcclusionMapDetail`.                                 |

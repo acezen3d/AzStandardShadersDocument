@@ -1,5 +1,5 @@
 # Az Standard Shaders
-v3.5.0, Acezen
+v4.0.0, Acezen
 
 - [Az Standard Shaders](#az-standard-shaders)
   - [Introduction](#introduction)
@@ -11,6 +11,7 @@ v3.5.0, Acezen
   - [Upgrade Info](#upgrade-info)
     - [Version 1.x -\> 2.x](#version-1x---2x)
     - [Version 2.x -\> 3.x](#version-2x---3x)
+    - [Version 3.x -\> 4.x](#version-3x---4x)
   - [Known Issues](#known-issues)
   - [Notes](#notes)
   - [Download](#download)
@@ -48,8 +49,8 @@ I've been making MMD videos in Koikatsu (Sunshine) using `Haruka`'s KKUSS shader
 - Az Standard shaders support and improve properties of KKUSS shaders, see [Compared to KKUSS Shaders](compared_to_kkuss_shaders.md).
 - Az Standard shaders support up to `QualitySettings.pixelLightCount` pixel lights, vertex lights, and spherical harmonics, just like Unity Standard shader does.
 - Unlike KKUSS, where different KKUSS shaders have different lighting calculations (intentional or bug?), all Az Standard shaders are using the same lighting calculation. This makes all materials look consistent in appearance across the full range of lighting conditions (from darkness with only indirect lights, to lightness with multiple direct lights). That's one of the purposes I replicate KKUSS shaders. This allows us to animate the lights in Koikatsu without ruining the rendering.
-- KKUSS shaders did not have a property to control fake indirect lighting, it just mixed the light color with a certain amount (unchangeable) of white, but Az Standard shaders have the property `DummyAmbient` to give users the direct control of the fake indirect lighting.
-- When `DummyAmbient` is black, all the fake indirect lighting will disappear, the lighting result of all Az Standard shaders will be exactly the same as Unity Standard shader.
+- KKUSS shaders did not have a property to control fake indirect lighting, it just mixed the light color with a certain amount (unchangeable) of white, but Az Standard shaders have the properties: `ShadowIntensity` to control the shadow intensity without introducing any additional lights; `DummyAmbient` to add and control fake ambient light.
+- When `ShadowIntensity` is 1 and `DummyAmbient` is black, all the fake indirect lighting will disappear, the lighting result of all Az Standard shaders will be exactly the same as Unity Standard shader.
 - `DummyAmbient` also uses `OcclusionMap`, which is the same as Unity’s ambient light.
 - KKUSS's original `Occlusion` was used to control both the diffuse and specular terms of the real indirect lighting, so if you've used that property you know what I'm talking about. Now I've separated this property into two parts, `IndirectDiffuseIntensity` and `IndirectSpecularIntensity`, to make it easier to adjust these two terms separately.
 - I made two versions for Koikatsu and Koikatsu Sunshine to solve rendering problems caused by different Unity versions. For example, using KKUSS shaders in Koikatsu Sunshine, the point light is rendered inverted when it has a reasonable range value, i.e. the illuminated area is darker and the shaded area is brighter. Az Standard shader for Koikatsu Sunshine does not have this problem.
@@ -94,7 +95,10 @@ Of course, there is the old-fashion way, that is the combinations of features. F
 
 Fortunately, `Material Editor` v3.3.0 has officially added support for the Unity's shader keywords, more info about [Shader Keywords](https://docs.unity3d.com/Manual/shader-keywords.html). This allows us to turn different features into keywords to enable and disable them. ~~In addition, we can also make some selective calculations, such as the keywords added in v2.2.0.~~ The only downside to doing this is that it will cause more shader variants to be compiled and the size of the mod will be larger, but Unity will choose different variants at runtime based on the keywords to save performance, which is a typical space-for-time treatment. Of course it also helps me maintain the code, after all I don't have to do feature combinations.
 
-Based on the benefits of the shader keyword described above, I merge out the tessellation variant shaders introduced in v1.1.0, add `TESSELLATION` and `DISPLACEMENT` keywords to enable or disable the corresponding features.
+Based on the benefits of the shader keyword described above, I merged out the tessellation variant shaders introduced in v1.1.0, added `TESSELLATION` and `DISPLACEMENT` keywords to enable or disable the corresponding features.
+
+### Version 3.x -> 4.x
+I saved `ShadowIntensity` from the void, which is an undo of the removal of `ShadowIntensity` and `ShadowlessColor` in [Version 1.x -\> 2.x](#version-1x---2x). That's what many people want and the only reason for this upgrade, for the control logic of `ShadowIntensity` may be more intuitive for users. In order not to break light settings like the intensity and range, I didn't save `ShadowlessColor`, let it be in the void forever. The reason we can do this is because I found a way to solve the rendering problem mentioned in [Version 1.x -\> 2.x](#version-1x---2x). And now Az Standard shaders support shadow control in all lighting situations, this includes the following lighting keywords: POINT, SPOT, DIRECTIONAL, POINT_COOKIE, DIRECTIONAL_COOKIE.
 
 ## Known Issues
 - ~~`Material Editor` used a sRGB color space uncompressed normal map as the default value for normal map properties, which is wrong. But I can't make a normal map property defaults with an explicit texture, because this will ruin `Material Editor`'s optimization mechanism for texture sharing between shaders. Therefore, remember to assign an empty normal map to any unassigned normal map properties.~~ Thanks to `Rikki Balboa`, `Material Editor` has now been fixed (https://github.com/IllusionMods/KK_Plugins/releases/tag/v253) to provide correct default texture for normal maps and automatically convert OpenGL normal maps.

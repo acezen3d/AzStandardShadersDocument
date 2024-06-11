@@ -15,7 +15,7 @@
 | DisplaceStrength         | Float(0,1)  | 1             | The intensity of displacement application.                                                                                                                                                                   |
 | DisplaceNormalTexelSize  | Float(1,10) | 1             | The texel size multiplier, controlling sampling offset of Scharr filter. The larger this value, the stronger and smoother the normal value. vice versa.                                                      |
 | DisplaceNormalMultiplier | Float(0,10) | 1             | Control the scale of the normals generated from `DisplaceMap`, used to adjust the surface normals after displacement. Works with `DisplaceStrength`.                                                         |
-| DisplaceAdjustment       | Float(0,2)  | 0             | See [Additional Property Description/DisplaceAdjustment](#displaceadjustment)                                                                                                                                |
+| DisplaceAdjustment       | Float(0,2)  | 0             | See [Additional Property Description/DisplaceAdjustment](#displaceadjustment).                                                                                                                               |
 | DisplaceOffset           | Vector      | (0,0,0,0)     | Offset the displaced object in its object space. ***red***: x-axis, ***green***: y-axis, ***blue***: z-axis, ***alpha***: not used.                                                                          |
 
 ## Additional Property Description

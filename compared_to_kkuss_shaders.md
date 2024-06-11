@@ -9,6 +9,7 @@
 ## Properties Name Changed
 - AddColor -> BaseColor
 - SpecularPower -> Glossiness (some KKUSS shaders use `Glossiness`, some others use `SpecularPower`)
+- ShadowPower -> ShadowIntensity
 
 ## Properties Added (Generally)
 - DummyAmbient
@@ -22,7 +23,6 @@
 - Displacement properties
 
 ## Properties Removed
-- ShadowPower
 - Emission
 - Occlusion
 
