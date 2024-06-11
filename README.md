@@ -102,12 +102,12 @@ I saved `ShadowIntensity` from the void, which is an undo of the removal of `Sha
 
 ## Known Issues
 - ~~`Material Editor` used a sRGB color space uncompressed normal map as the default value for normal map properties, which is wrong. But I can't make a normal map property defaults with an explicit texture, because this will ruin `Material Editor`'s optimization mechanism for texture sharing between shaders. Therefore, remember to assign an empty normal map to any unassigned normal map properties.~~ Thanks to `Rikki Balboa`, `Material Editor` has now been fixed (https://github.com/IllusionMods/KK_Plugins/releases/tag/v253) to provide correct default texture for normal maps and automatically convert OpenGL normal maps.
+- You have to update your `Material Editor` to v3.3.0 or later to use Az Standard shaders v2.2.0 or later without problems. This is because only newer versions of `Material Editor` support shader keywords in Az Standard shaders added from v2.2.0. If you use Az Standard shaders v2.2.0 or later in an older version of `Material Editor`, you may get an error that `Material Editor` fails and other shader mods cannot be loaded.
 
 ## Notes
 - Albedo stack order: (Underlay & Overlay)ed `MainTex` -> `BaseColor` -> `ColorMask` -> `DrawnMap` -> `Detail Albedo 1 & 2`.
 - Since `MetallicGlossMap` uses ***red*** and ***blue*** channels, while `OcclusionMap` uses ***green*** channel, so two of them can be packed into one texture.
 - [Texture Maps Color Space](texture_maps_color_space.md).
-- You have to update your `Material Editor` to v3.3.0 or later to use Az Standard shaders v2.2.0 or later without problems. This is because only newer versions of `Material Editor` support shader keywords in Az Standard shaders added from v2.2.0. If you use Az Standard shaders v2.2.0 or later in an older version of `Material Editor`, you may get an error that `Material Editor` fails and other shader mods cannot be loaded.
 
 ## Download
 [https://mega.nz/folder/CYtRjKBQ#1SvoZEZCnLxuPs5q56P5Ww](https://mega.nz/folder/CYtRjKBQ#1SvoZEZCnLxuPs5q56P5Ww)
