@@ -12,7 +12,8 @@
 - ShadowPower -> ShadowIntensity
 
 ## Properties Added (Generally)
-- DummyAmbient
+- ShadowSpecularControl
+- DummyAmbient 
 - IndirectDiffuseIntensity (separated from Occlusion)
 - IndirectSpecularIntensity (separated from Occlusion)
 - EmissionMap
@@ -21,6 +22,7 @@
 - Detail properties
 - Tessellation properties
 - Displacement properties
+- Shadow optimization properties
 
 ## Properties Removed
 - Emission

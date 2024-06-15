@@ -23,7 +23,8 @@
 - Metallic (used with MetallicGlossMap)
 - EmissionIntensity
 - DetailAlbedoMapScale
-- DummyAmbient 
+- ShadowSpecularControl
+- DummyAmbient
 - IndirectDiffuseIntensity
 - IndirectSpecularIntensity
 - DrawnMap
@@ -32,6 +33,7 @@
 - Detail properties
 - Tessellation properties
 - Displacement properties
+- Shadow optimization properties
 
 ## Properties Removed
 - ParallaxMap
