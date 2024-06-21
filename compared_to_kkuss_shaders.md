@@ -16,6 +16,7 @@
 - DummyAmbient 
 - IndirectDiffuseIntensity (separated from Occlusion)
 - IndirectSpecularIntensity (separated from Occlusion)
+- NormalBackFaceFlip
 - EmissionMap
 - EmissionColor
 - EmissionIntensity

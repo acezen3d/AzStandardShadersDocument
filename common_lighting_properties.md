@@ -1,6 +1,6 @@
-# Lighting Properties
+# Common Lighting Properties
 
-- [Lighting Properties](#lighting-properties)
+- [Common Lighting Properties](#common-lighting-properties)
   - [Properties](#properties)
   - [Additional Property Description](#additional-property-description)
     - [ShadowIntensity](#shadowintensity)

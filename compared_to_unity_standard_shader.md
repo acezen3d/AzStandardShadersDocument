@@ -27,6 +27,7 @@
 - DummyAmbient
 - IndirectDiffuseIntensity
 - IndirectSpecularIntensity
+- NormalBackFaceFlip
 - DrawnMap
 - DrawnMapSpecularStrength
 - DrawnMapShadowStrength

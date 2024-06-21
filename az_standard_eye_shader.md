@@ -64,7 +64,7 @@
 | ExpressionDepth                                                  | Float(-1,1)    | 0             | The iris expression overlay depth (uv offset), borrowed from KK Plus.                  |
 | rotation                                                         | Float(0,1)     | 0             | The rotation of the iris, set automatically by Koikatsu. You may not need to touch it. |
 | ***Lighting Properties***                                        |                |               |                                                                                        |
-| [Lighting Properties](lighting_properties.md)                    |                |               |                                                                                        |
+| [Common Lighting Properties](common_lighting_properties.md)      |                |               |                                                                                        |
 | ***Tessellation Properties***                                    |                |               |                                                                                        |
 | [Tessellation Properties](tessellation_properties.md#properties) |                |               |                                                                                        |
 | ***Displacement Properties***                                    |                |               |                                                                                        |
