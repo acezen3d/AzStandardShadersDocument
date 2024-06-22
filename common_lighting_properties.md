@@ -21,7 +21,7 @@
 ## Additional Property Description
 
 ### ShadowIntensity
-`ShadowIntensity` controls the intensity of shadows cast on the object. But unlike `ShadowPower` of KKUSS shaders or `ShadowIntensity` of previous versions of Az Standard shaders, it neither adds additional lights nor mixes with other colors, the light color itself does not change in any way. The purpose of this is not to affect the intensity and range (attenuation) of the light. `ShadowIntensity` also does not affect the mask of the light, such as spot lights (with cookies), point lights with cookies and directional lights with cookies.
+`ShadowIntensity` controls the intensity of shadows/dark areas on the object. But unlike `ShadowPower` of KKUSS shaders or `ShadowIntensity` of previous versions of Az Standard shaders, it neither adds additional lights nor mixes with other colors, the light color itself does not change in any way. The purpose of this is not to affect the intensity and range (attenuation) of the light. `ShadowIntensity` also does not affect the mask of the light, such as spot lights (with cookies), point lights with cookies and directional lights with cookies.
 
 ### ShadowSpecularControl
 Whether `ShadowIntensity` also controls the intensity of specular highlights in shadows.
