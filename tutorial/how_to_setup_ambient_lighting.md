@@ -85,12 +85,14 @@ UnityEngine.RenderSettings.reflectionIntensity = 1.0f;
 - https://assetstore.unity.com/packages/tools/utilities/panorama-to-cubemap-13616
 
 ## How to Get a Skybox Material in Runtime Unity Editor
-- Find mod items that use `Skybox/Cubemap` shader, like **Az/Skybox/\***, **[Cz]/SkyBox/\***, **nashi/Skybox/\***, etc., place it.
+- Find a mod item that use `Skybox/Cubemap` shader, like **Az/Skybox/\***, **[Cz]/SkyBox/\***, **nashi/Skybox/\***, etc., place it.
 - Choose it in the workspace and open `Material Editor` to check the renderer name, like **dome_sphere**.
 - Search the renderer name in `Runtime Unity Editor` `Object Browser` to find the `GameObject`.
-- Click `Inspect` to inspect the found `GameObject`, check its `Components`, find the `UnityEngine.MeshRenderer` component, like **dome_sphere (UnityEngine.MeshRenderer)**.
-- Enter the `UnityEngine.MeshRenderer` component, find the property `material`.
-- Right click on property `material`, and choose `Send to REPL`. A line of code will appear in the `REPL`, such as `var q = (UnityEngine.Material)InteropTempVar`.
+- Click `Inspect` to inspect the found `GameObject`, check its `Components`, find the component `UnityEngine.MeshRenderer`, like **dome_sphere (UnityEngine.MeshRenderer)**.
+- Enter the component `UnityEngine.MeshRenderer`, find the property `material`.
+- Enter the property `material`.
+  - Right click `material` on the breadcrumbs and choose `Send to REPL`, a line of code will appear in `Runtime Unity Editor` `REPL`, such as `var q = (UnityEngine.Material)InteropTempVar;`.
+  - Or just go to `Runtime Unity Editor` `REPL` and type the code `var q = geti();`.
 - Click `Run` to run the code in `Runtime Unity Editor` `REPL`.
 - Now the variable `q` carries our skybox material.
 
