@@ -11,7 +11,6 @@
 | Name                                                             | Type          | Default Value | Description                                                          |
 | ---------------------------------------------------------------- | ------------- | ------------- | -------------------------------------------------------------------- |
 | ***Basic Properties***                                           |               |               |                                                                      |
-| Alpha                                                            | Float(0,1)    | 1             | Alpha control.                                                       |
 | LineLightness                                                    | Float(0,1)    | 1             | Line lightness.                                                      |
 | LineThickness                                                    | Float(0,1)    | 0.5           | Line thickness.                                                      |
 | LineSmoothness                                                   | Float(0,20)   | 3             | Line smoothness.                                                     |
@@ -28,7 +27,6 @@
 | [Displacement Properties](displacement_properties.md#properties) |               |               |                                                                      |
 | ***Shader Command Properties***                                  |               |               |                                                                      |
 | Cull                                                             | Enum(0,2)     | 0             | Face culling, 0 - cull off, 1 - cull front, 2 - cull back.           |
-| ZWrite                                                           | Enum(0,1)     | 1             | Whether to update the depth buffer.                                  |
 | ***Shader Keywords***                                            |               |               |                                                                      |
 | [Tessellation Keywords](tessellation_properties.md#keywords)     |               |               |                                                                      |
 | [Displacement Keywords](displacement_properties.md#keywords)     |               |               |                                                                      |
