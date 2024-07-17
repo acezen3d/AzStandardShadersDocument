@@ -1,14 +1,14 @@
 # Compared to Unity Standard Shader
 
 - [Compared to Unity Standard Shader](#compared-to-unity-standard-shader)
-  - [Properties Name Changed](#properties-name-changed)
-  - [Properties Added (Generally)](#properties-added-generally)
+  - [Properties Changed](#properties-changed)
+  - [Properties Added](#properties-added)
   - [Properties Removed](#properties-removed)
-  - [Properties Hided](#properties-hided)
+  - [Keywords Removed](#keywords-removed)
   - [Notes](#notes)
 
-## Properties Name Changed
-- (Glossiness, GlossMapScale) -> Glossiness
+## Properties Changed
+- GlossMapScale -> Glossiness
 - BumpMap -> NormalMap
 - BumpScale -> NormalMapScale
 - DetailNormalMap -> NormalMapDetail
@@ -16,39 +16,26 @@
 - SrcBlend -> BlendSrc
 - DstBlend -> BlendDst
 
-## Properties Added (Generally)
-- AlphaMask
-- alpha_a (hided)
-- alpha_b (hided)
-- Metallic (used with MetallicGlossMap)
-- EmissionIntensity
-- DetailAlbedoMapScale
-- ShadowSpecularControl
-- DummyAmbient
-- IndirectDiffuseIntensity
-- IndirectSpecularIntensity
-- NormalBackFaceFlip
-- DrawnMap
-- DrawnMapSpecularStrength
-- DrawnMapShadowStrength
-- Detail properties
-- Tessellation properties
-- Displacement properties
-- Shadow optimization properties
+## Properties Added
+Omitted
 
 ## Properties Removed
 - ParallaxMap
 - Parallax
 - UVSec
 - SmoothnessTextureChannel
-- PARALLAXMAP
-- DETAIL_MULX2
-- NORMALMAP
-- SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
-
-## Properties Hided
 - SpecularHighlights
 - GlossyReflections
+
+## Keywords Removed
+- NORMALMAP
+- EMISSION
+- METALLICGLOSSMAP
+- DETAIL_MULX2
+- SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+- SPECULARHIGHLIGHTS_OFF
+- GLOSSYREFLECTIONS_OFF
+- PARALLAXMAP
 
 ## Notes
 - The parallax has been removed because it is not common used.
