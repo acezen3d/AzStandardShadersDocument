@@ -38,7 +38,7 @@ UnityEngine.RenderSettings.ambientEquatorColor = new UnityEngine.Color(0.6f, 0.6
 UnityEngine.RenderSettings.ambientMode = UnityEngine.Rendering.AmbientMode.Skybox;
 UnityEngine.RenderSettings.skybox = {{materialSkybox}}; // [n1]
 UnityEngine.DynamicGI.UpdateEnvironment();
-// Controls
+// Intensity control
 UnityEngine.RenderSettings.ambientIntensity = 1.0f;
 ```
 [n1]: See [How to Get a Skybox Material in Runtime Unity Editor](#how-to-get-a-skybox-material-in-runtime-unity-editor).
@@ -47,10 +47,16 @@ UnityEngine.RenderSettings.ambientIntensity = 1.0f;
 ```cs
 UnityEngine.RenderSettings.ambientMode = UnityEngine.Rendering.AmbientMode.Custom;
 UnityEngine.RenderSettings.ambientProbe = {{lightProbeCustom}}; // UnityEngine.Rendering.SphericalHarmonicsL2 [n2]
-// Controls
-UnityEngine.RenderSettings.ambientIntensity = 1.0f;
 ```
-[n2]: Rarely used, can be ignored directly. You can indeed construct `UnityEngine.Rendering.SphericalHarmonicsL2` yourself https://docs.unity3d.com/ScriptReference/Rendering.SphericalHarmonicsL2.html.
+[n2]: You can construct `UnityEngine.Rendering.SphericalHarmonicsL2` yourself https://docs.unity3d.com/ScriptReference/Rendering.SphericalHarmonicsL2.html, see below.
+```cs
+UnityEngine.Rendering.SphericalHarmonicsL2 sh;
+sh.Clear();
+sh.AddAmbientLight(new UnityEngine.Color(0.35f, 0.35f, 0.35f));
+sh.AddDirectionalLight(new UnityEngine.Vector3(0f,1f,0f).normalized, new UnityEngine.Color(0.1f, 0.1f, 0.1f), 0.25f);
+UnityEngine.RenderSettings.ambientMode = UnityEngine.Rendering.AmbientMode.Custom;
+UnityEngine.RenderSettings.ambientProbe = sh;
+```
 
 ## Ambient Lighting Specular Term
 
@@ -58,7 +64,7 @@ UnityEngine.RenderSettings.ambientIntensity = 1.0f;
 ```cs
 UnityEngine.RenderSettings.defaultReflectionMode = UnityEngine.Rendering.DefaultReflectionMode.Skybox;
 UnityEngine.RenderSettings.skybox = {{materialSkybox}}; // [n3]
-// Controls
+// Intensity control
 UnityEngine.RenderSettings.defaultReflectionResolution = 1024;
 UnityEngine.RenderSettings.reflectionIntensity = 1.0f;
 ```
@@ -75,7 +81,7 @@ UnityEngine.RenderSettings.customReflection = {{cubemapCustom}}; // [n5]
 /*
 UnityEngine.RenderSettings.customReflection = (UnityEngine.Cubemap)UnityEngine.RenderSettings.skybox.GetTexture("_Tex"); [n4]
 */
-// Controls
+// Intensity control
 UnityEngine.RenderSettings.reflectionIntensity = 1.0f;
 ```
 [n4]: If we have already setup `UnityEngine.RenderSettings.skybox`, then this is a easy and quick way.
