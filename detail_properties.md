@@ -3,6 +3,7 @@
 - [Detail Properties](#detail-properties)
   - [Properties](#properties)
   - [Additional Property Description](#additional-property-description)
+    - [DetailMask](#detailmask)
     - [DetailAlbedoDouble](#detailalbedodouble)
     - [DetailMetallicGlossDouble](#detailmetallicglossdouble)
   - [Keywords](#keywords)
@@ -12,7 +13,7 @@
 ## Properties
 | Name                        | Type       | Default Value     | Description                                                                                                                                |
 | --------------------------- | ---------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| DetailMask                  | Texture    | black             | Used to mask the detail maps on its ***red***: detail set 1, ***green***: detail set 2.                                                    |
+| DetailMask                  | Texture    | black             | See [Additional Property Description/DetailMask](#detailmask).                                                                             |
 | ***UV Rotation***           |            |                   |                                                                                                                                            |
 | DetailUVRotationCenter      | Vector     | (0.5,0.5,0.5,0.5) | The (***red***, ***green***) is the detail set 1 UV rotation center. The (***blue***, ***alpha***) is the detail set 2 UV rotation center. |
 | DetailUVRotation            | Float(0,2) | 0                 | Detail set 1 UV rotation angle in radians, $n\pi$ in $[0, 2\pi]$.                                                                          |
@@ -43,6 +44,10 @@
 | DetailOcclusionStrength2    | Float(0,1) | 0                 | Detail ambient occlusion strength 2. Works with `OcclusionMap`, `OcclusionStrength`, `OcclusionMapDetail2`.                                |
 
 ## Additional Property Description
+### DetailMask
+***This is not Koikatsu's original `DetailMask`!***  
+Koikatsu uses this map to specify or control ramp based specular highlights, shadows and rim lights. But Az Standard shaders use this map to provide a mask for detail sets, i.e. on its ***red***: detail set 1, ***green***: detail set 2. 
+If you want to use something like `DetailMask` of Koikatsu, please refer to `DrawnMap` (see [Drawn Map Properties](drawn_map_properties.md)).
 
 ### DetailAlbedoDouble
 ***Value: 0***
