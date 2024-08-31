@@ -14,9 +14,9 @@
 | LineLightness                                                    | Float(0,1)    | 1             | Line lightness.                                                      |
 | LineThickness                                                    | Float(0,1)    | 0.5           | Line thickness.                                                      |
 | LineSmoothness                                                   | Float(0,20)   | 3             | Line smoothness.                                                     |
-| NoFill                                                           | Float(0,1)    | 0             | Do not draw the fill.                                                |
-| NoLine                                                           | Float(0,1)    | 0             | Do not draw the line.                                                |
-| LineUseFillColor                                                 | Float(0,1)    | 0             | Whether to use the fill color as the line color.                     |
+| NoFill                                                           | Boolean       | 0             | Do not draw the fill.                                                |
+| NoLine                                                           | Boolean       | 0             | Do not draw the line.                                                |
+| LineUseFillColor                                                 | Boolean       | 0             | Whether to use the fill color as the line color.                     |
 | ***Visualization Properties***                                   |               |               |                                                                      |
 | Visualization                                                    | Enum(0,3)     | 0             | See [Additional Property Description/Visualization](#visualization). |
 | BoneA                                                            | Integer(0,99) | 0             | Bone index A.                                                        |
