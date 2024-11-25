@@ -13,7 +13,7 @@
 ## Properties
 | Name                        | Type       | Default Value     | Description                                                                                                                                |
 | --------------------------- | ---------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| DetailMask                  | Texture    | black             | See [Additional Property Description/DetailMask](#detailmask).                                                                             |
+| DetailMask                  | Texture    | red               | See [Additional Property Description/DetailMask](#detailmask).                                                                             |
 | ***UV Rotation***           |            |                   |                                                                                                                                            |
 | DetailUVRotationCenter      | Vector     | (0.5,0.5,0.5,0.5) | The (***red***, ***green***) is the detail set 1 UV rotation center. The (***blue***, ***alpha***) is the detail set 2 UV rotation center. |
 | DetailUVRotation            | Float(0,2) | 0                 | Detail set 1 UV rotation angle in radians, $n\pi$ in $[0, 2\pi]$.                                                                          |
@@ -50,23 +50,23 @@ Koikatsu uses this map to specify or control ramp based specular highlights, sha
 If you want to use something like `DetailMask` of Koikatsu, please refer to `DrawnMap` (see [Drawn Map Properties](drawn_map_properties.md)).
 
 ### DetailAlbedoDouble
-***Value: 0***
+**Value: 0**
 - `AlbedoMapDetail` and `AlbedoMapDetail2` will be left untouched, with values in the interval $[0, 1]$ .
 - The mixing of details is equivalent to the multiplication of colors, which only darken the main albedo.
 - The color on the texture that keeps the main albedo unchanged is white (1,1,1).
 
-***Value: 1***
+**Value: 1**
 - `AlbedoMapDetail` and `AlbedoMapDetail2` will be doubled, with values in the interval $[0, 2^{2.2}]$ .  
 - This is Unity Standard shader's default detail albedo map mixing method, which can either brighten or darken the main albedo.
 - The color on the texture that keeps the main albedo unchanged is middle grey(0.5,0.5,0.5).
 
 ### DetailMetallicGlossDouble
-***Value: 0***
+**Value: 0**
 - `MetallicGlossMapDetail` and `MetallicGlossMapDetail2` will be left untouched, with values in the interval $[0, 1]$ .
 - The mixing of details is equivalent to the multiplication of colors, which only decrease the main metallic and glossiness.
 - The color on the texture that keeps the main metallic and glossiness unchanged is (1,n,1).
 
-***Value: 1***
+**Value: 1**
 - `MetallicGlossMapDetail` and `MetallicGlossMapDetail2` will be doubled, with values in the interval $[0, 2]$ .  
 - This can either increase or decrease the main metallic and glossiness.
 - The color on the texture that keeps the main metallic and glossiness unchanged is (0.5,n,0.5).

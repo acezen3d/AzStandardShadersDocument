@@ -1,5 +1,5 @@
 # Az Standard Shaders
-v4.5.0, Acezen
+v4.6.0
 
 - [Az Standard Shaders](#az-standard-shaders)
   - [Introduction](#introduction)
@@ -53,7 +53,7 @@ I've been making MMD videos in Koikatsu (Sunshine) using `Haruka`'s KKUSS shader
 - When `ShadowIntensity` is 1 and `DummyAmbient` is black, all the fake indirect lighting will disappear, the lighting result of all Az Standard shaders will be exactly the same as Unity Standard shader.
 - `DummyAmbient` also uses `OcclusionMap`, which is the same as Unity’s ambient light.
 - KKUSS's original `Occlusion` was used to control both the diffuse and specular terms of the real indirect lighting, so if you've used that property you know what I'm talking about. Now I've separated this property into two parts, `IndirectDiffuseIntensity` and `IndirectSpecularIntensity`, to make it easier to adjust these two terms separately.
-- I made two versions for Koikatsu and Koikatsu Sunshine to solve rendering problems caused by different Unity versions. For example, using KKUSS shaders in Koikatsu Sunshine, the point light is rendered inverted when it has a reasonable range value, i.e. the illuminated area is darker and the shaded area is brighter. Az Standard shader for Koikatsu Sunshine does not have this problem.
+- I made two versions for Koikatsu and Koikatsu Sunshine to solve rendering problems caused by different Unity versions. For example, using KKUSS shaders in Koikatsu Sunshine, the point light is rendered inverted when it has a reasonable range value, i.e. the illuminated area is darker and the shaded area is brighter. Az Standard shaders for Koikatsu Sunshine does not have this problem.
 - Az Standard shaders fix the issue in KKUSS where a rectangular bounding box would appear in the illuminated area when using spot or point lights with a reasonable range.
 - Az Standard shaders have tessellation and displacement variants to increase the level of detail of objects.
 - Az Standard shaders support the Koikatsu’s original `DetailMask` with a preprocessed approach.

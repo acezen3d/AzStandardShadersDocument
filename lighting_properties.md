@@ -7,6 +7,7 @@
     - [ShadowSpecularControl](#shadowspecularcontrol)
   - [Keywords](#keywords)
     - [SHADOW\_OPTIMIZATION](#shadow_optimization)
+    - [SAMPLE\_FULL\_SH\_PER\_PIXEL](#sample_full_sh_per_pixel)
 
 ## Properties
 | Name                      | Type         | Default Value   | Description                                                                                                                                                                                                                                                                                                                                |
@@ -17,6 +18,12 @@
 | DummyAmbient              | Color        | (0.2,0.2,0.2,1) | This is a dummy ambient light setting, helping users obtain fake indirect lighting (diffuse term). And it can also make `OcclusionMap`, `OcclusionMapDetail(2)` work. ***rgb***: ambient light color, ***alpha***: not used. If you have ambient light setting or light probes in the scene, consider turning this off by setting (0,0,0). |
 | IndirectDiffuseIntensity  | Float(0,1)   | 1               | Separated from `Occlusion` of KKUSS. It controls the diffuse term of real indirect lighting. You should setup your own indirect lights for it to work.                                                                                                                                                                                     |
 | IndirectSpecularIntensity | Float(0,1)   | 1               | Separated from `Occlusion` of KKUSS. It controls the specular term of real indirect lighting. You should setup your own indirect lights for it to work.                                                                                                                                                                                    |
+| NormalBackFaceFlip        | Float(0,1)   | 0               | Whether to flip the normals of the back faces.                                                                                                                                                                                                                                                                                             |
+
+**Properties Not Supported by Shaders**
+| Name               | Unsupported Shaders                 |
+| ------------------ | ----------------------------------- |
+| NormalBackFaceFlip | `Az/StandardEye`, `Az/StandardEyeW` |
 
 ## Additional Property Description
 
@@ -26,10 +33,10 @@
 ### ShadowSpecularControl
 Whether `ShadowIntensity` also controls the intensity of specular highlights in shadows.
 
-***Value: 0***
+**Value: 0**
 - No, don't show specular highlights in shadows.
 
-***Value: 1***
+**Value: 1**
 - Yes, show specular highlights in shadows and they're controlled by `ShadowIntensity`.
 
 ## Keywords
@@ -38,3 +45,10 @@ Whether `ShadowIntensity` also controls the intensity of specular highlights in 
 **Off**: Disable the shadow optimization. ***Default***.
 
 **On**: Enable the shadow optimization.
+
+### SAMPLE_FULL_SH_PER_PIXEL
+**Off**: Use Unity's default SH (Spherical Harmonics) sampling strategy, L2 per vertex, L0 and L1 per pixel. ***Default***.
+
+**On**: Sample all L0, L1 and L2 components of SH per pixel.
+
+Unsupported shaders: `Az/StandardEye`, `Az/StandardEyeW`.
