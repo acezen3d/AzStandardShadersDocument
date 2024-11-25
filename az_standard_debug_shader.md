@@ -36,19 +36,19 @@
 ### Visualization
 `Visualization` determines the fill color.
 
-***Value: 0***
+**Value: 0**
 - Visualizes ***World Normal***.
 - If `DISPLACEMENT` is turned on, the normals displayed are after the displacement.
 
-***Value: 1***
+**Value: 1**
 - Visualizes ***Face Orientation***.
 - Like Blender, blue means front faces, and red means back faces.
 
-***Value: 2***
+**Value: 2**
 - Visualizes ***Vertex Color***.
 - If there is vertex color data in the model, it will be displayed.
 
-***Value: 3***
+**Value: 3**
 - Visualizes ***Blend Weight***.
 - Can display the weights of two bones (`BoneA` and `BoneB`) at the same time.
 - Change the values ​​of `BoneA` and `BoneB` to see the weights of the corresponding bones.

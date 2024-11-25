@@ -35,3 +35,4 @@ The indication of the color space they are in is provided as a reference for use
 | expression              | Gamma       |                                               |
 | ***Extra***             |             |                                               |
 | OverTex1NormalMap       | Linear      | No conversion required.                       |
+| OverTex2NormalMap       | Linear      | No conversion required.                       |

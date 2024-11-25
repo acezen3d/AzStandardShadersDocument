@@ -14,3 +14,11 @@
 | EmissionIntensity | Float(0,1) | 0             | Emission intensity control, will be multiplied with `EmissionMap` and `EmissionColor`.                                                                                                                    |
 | NormalMap         | Texture    | bump          | Main normal map.                                                                                                                                                                                          |
 | NormalMapScale    | Float(0,1) | 1             | Main normal map scale.                                                                                                                                                                                    |
+
+**Properties Not Supported by Shaders**
+| Name              | Unsupported Shaders                 |
+| ----------------- | ----------------------------------- |
+| OcclusionMap      | `Az/StandardEye`, `Az/StandardEyeW` |
+| OcclusionStrength | `Az/StandardEye`, `Az/StandardEyeW` |
+| NormalMap         | `Az/StandardEye`, `Az/StandardEyeW` |
+| NormalMapScale    | `Az/StandardEye`, `Az/StandardEyeW` |
