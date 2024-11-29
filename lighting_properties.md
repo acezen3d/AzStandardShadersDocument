@@ -1,6 +1,6 @@
-# Common Lighting Properties
+# Lighting Properties
 
-- [Common Lighting Properties](#common-lighting-properties)
+- [Lighting Properties](#lighting-properties)
   - [Properties](#properties)
   - [Additional Property Description](#additional-property-description)
     - [ShadowIntensity](#shadowintensity)
@@ -42,7 +42,7 @@ Whether `ShadowIntensity` also controls the intensity of specular highlights in 
 - Yes, show specular highlights in shadows and they're controlled by `ShadowIntensity`.
 
 ### ShadowTransitionPower
-The power of the transition gradient at the light-dark boundaries. It fine-tunes the lighting by adjusting the falloff of the diffuse term of the direct lighting, so it is not physically correct. However, for artistic style purposes, we could create a smoother transition at the light-dark boundaries with this property. This allows us to choose whether to make the light-dark boundaries appear as smooth as they would in gamma space, even when rendering in linear space ([Differences between linear and gamma color space](https://docs.unity3d.com/2019.4/Documentation/Manual/LinearRendering-LinearOrGammaWorkflow.html)). The default value 0 means no fine-tuning.
+The power of the transition gradient at the light-dark boundaries. It fine-tunes the lighting by adjusting the falloff of the diffuse term of direct illumination, so it is not physically correct. However, for artistic style purposes, we could create a smoother transition at the light-dark boundaries with this property. This allows us to choose whether to make the light-dark boundaries appear as smooth as they would in gamma space, even when rendering in linear space ([Differences between linear and gamma color space](https://docs.unity3d.com/2019.4/Documentation/Manual/LinearRendering-LinearOrGammaWorkflow.html)). The default value 0 means no fine-tuning.
 
 ## Keywords
 
