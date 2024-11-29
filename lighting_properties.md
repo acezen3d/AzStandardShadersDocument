@@ -5,6 +5,7 @@
   - [Additional Property Description](#additional-property-description)
     - [ShadowIntensity](#shadowintensity)
     - [ShadowSpecularControl](#shadowspecularcontrol)
+    - [ShadowTransitionPower](#shadowtransitionpower)
   - [Keywords](#keywords)
     - [SHADOW\_OPTIMIZATION](#shadow_optimization)
     - [SAMPLE\_FULL\_SH\_PER\_PIXEL](#sample_full_sh_per_pixel)
@@ -18,6 +19,7 @@
 | DummyAmbient              | Color        | (0.2,0.2,0.2,1) | This is a dummy ambient light setting, helping users obtain fake indirect lighting (diffuse term). And it can also make `OcclusionMap`, `OcclusionMapDetail(2)` work. ***rgb***: ambient light color, ***alpha***: not used. If you have ambient light setting or light probes in the scene, consider turning this off by setting (0,0,0). |
 | IndirectDiffuseIntensity  | Float(0,1)   | 1               | Separated from `Occlusion` of KKUSS. It controls the diffuse term of real indirect lighting. You should setup your own indirect lights for it to work.                                                                                                                                                                                     |
 | IndirectSpecularIntensity | Float(0,1)   | 1               | Separated from `Occlusion` of KKUSS. It controls the specular term of real indirect lighting. You should setup your own indirect lights for it to work.                                                                                                                                                                                    |
+| ShadowTransitionPower     | Float(0,1)   | 0               | See [Additional Property Description/ShadowTransitionPower](#shadowtransitionpower).                                                                                                                                                                                                                                                       |
 | NormalBackFaceFlip        | Float(0,1)   | 0               | Whether to flip the normals of the back faces.                                                                                                                                                                                                                                                                                             |
 
 **Properties Not Supported by Shaders**
@@ -38,6 +40,9 @@ Whether `ShadowIntensity` also controls the intensity of specular highlights in 
 
 **Value: 1**
 - Yes, show specular highlights in shadows and they're controlled by `ShadowIntensity`.
+
+### ShadowTransitionPower
+The power of the transition gradient at the light-dark boundaries. It fine-tunes the lighting by adjusting the falloff of the diffuse term of the direct lighting, so it is not physically correct. However, for artistic style purposes, we could create a smoother transition at the light-dark boundaries with this property. This allows us to choose whether to make the light-dark boundaries appear as smooth as they would in gamma space, even when rendering in linear space ([Differences between linear and gamma color space](https://docs.unity3d.com/2019.4/Documentation/Manual/LinearRendering-LinearOrGammaWorkflow.html)). The default value 0 means no fine-tuning.
 
 ## Keywords
 

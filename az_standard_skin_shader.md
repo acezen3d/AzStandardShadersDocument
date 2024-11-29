@@ -5,6 +5,8 @@
   - [Setup](#setup)
   - [Koikatsu Shader Property Support](#koikatsu-shader-property-support)
   - [Properties](#properties)
+  - [Additional Property Description](#additional-property-description)
+    - [UseBlueAsMaskForNormalMaps](#useblueasmaskfornormalmaps)
 
 ## Koikatsu Target Shader
 - Shader Forge/main_skin
@@ -97,6 +99,7 @@
 | OverTex1NormalMapScale                                           | Float(0,1) | 1             | `OverTex1NormalMap` scale.                                                                                                     |
 | OverTex2NormalMap                                                | Texture    | bump          | An extra normal map using the UV of `overtex2` to create details for the pubic area.                                           |
 | OverTex2NormalMapScale                                           | Float(0,1) | 1             | `OverTex2NormalMap` scale.                                                                                                     |
+| UseBlueAsMaskForNormalMaps                                       | Boolean    | 0             | See [Additional Property Description/UseBlueAsMaskForNormalMaps](#useblueasmaskfornormalmaps).                                 |
 | ***Shader Command Properties***                                  |            |               |                                                                                                                                |
 | Cull                                                             | Enum(0,2)  | 0             | Face culling, 0 - cull off, 1 - cull front, 2 - cull back.                                                                     |
 | ***Shader Keywords***                                            |            |               |                                                                                                                                |
@@ -104,3 +107,9 @@
 | [Tessellation Keywords](tessellation_properties.md#keywords)     |            |               |                                                                                                                                |
 | [Displacement Keywords](displacement_properties.md#keywords)     |            |               |                                                                                                                                |
 | [Lighting Keywords](lighting_properties.md#keywords)             |            |               |                                                                                                                                |
+
+## Additional Property Description
+
+### UseBlueAsMaskForNormalMaps
+Whether to use the blue channel of the normal maps `NormalMap`, `OverTex1NormalMap`, and `OverTex2NormalMap` as their mask. This is mainly to address the issue of insufficient precision of normal maps in `Material Editor`, which causes flat normals to be not flat and discontinuities at seams.  
+You need to make a special normal map with the blue channel serving as a mask. This is not the regular transparent-pink or blue-violet normal map. The application intensity of normal maps `NormalMap`, `OverTex1NormalMap`, and `OverTex2NormalMap` will be determined by the product of the blue channel value and the corresponding scales `NormalMapScale`, `OverTex1NormalMapScale` and `OverTex2NormalMapScale`. If you're unsure about what this property does, don't use it. Enabling this with regular normal maps will result in incorrect normals.

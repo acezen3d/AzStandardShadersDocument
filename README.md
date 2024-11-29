@@ -1,5 +1,5 @@
 # Az Standard Shaders
-v4.6.0
+v4.7.0
 
 - [Az Standard Shaders](#az-standard-shaders)
   - [Introduction](#introduction)
@@ -107,6 +107,13 @@ I saved `ShadowIntensity` from the void, which is an undo of the removal of `Sha
 - Albedo stack order: (Underlay & Overlay)ed `MainTex` -> `BaseColor` -> `ColorMask` -> `DrawnMap` -> `Detail Albedo 1 & 2`.
 - Since `MetallicGlossMap` uses ***red*** and ***blue*** channels, while `OcclusionMap` uses ***green*** channel, so two of them can be packed into one texture.
 - [Texture Maps Color Space](texture_maps_color_space.md).
+- When Az Standard shaders have exactly the same lighting result as Unity Standard shader?
+  - `ShadowIntensity`: 1
+  - `DummyAmbient`: black (0,0,0)
+  - `ShadowSpecularControl`: 0
+  - `IndirectDiffuseIntensity`: 1
+  - `IndirectSpecularIntensity`: 1
+  - `ShadowTransitionPower`: 0
 
 ## Download
 [https://mega.nz/folder/CYtRjKBQ#1SvoZEZCnLxuPs5q56P5Ww](https://mega.nz/folder/CYtRjKBQ#1SvoZEZCnLxuPs5q56P5Ww)
