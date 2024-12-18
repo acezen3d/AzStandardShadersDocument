@@ -1,5 +1,5 @@
 # Az Standard Shaders
-v4.7.0
+v4.8.0
 
 - [Az Standard Shaders](#az-standard-shaders)
   - [Introduction](#introduction)
