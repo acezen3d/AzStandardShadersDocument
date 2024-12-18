@@ -109,8 +109,10 @@ I saved `ShadowIntensity` from the void, which is an undo of the removal of `Sha
 - [Texture Maps Color Space](texture_maps_color_space.md).
 - When Az Standard shaders have exactly the same lighting result as Unity Standard shader?
   - `ShadowIntensity`: 1
-  - `DummyAmbient`: black (0,0,0)
+  - `ShadowDarkControl`: 0
+  - `ShadowCookieControl`: 0
   - `ShadowSpecularControl`: 0
+  - `DummyAmbient`: black (0,0,0)
   - `IndirectDiffuseIntensity`: 1
   - `IndirectSpecularIntensity`: 1
   - `ShadowTransitionPower`: 0
