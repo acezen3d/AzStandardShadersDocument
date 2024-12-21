@@ -73,7 +73,7 @@ The power of the transition gradient at the light-dark boundaries. It fine-tunes
 ### SHADOW_OPTIMIZATION
 **Off**: Disable the shadow optimization. ***Default***.
 
-**On**: Enable the shadow optimization.
+**On**: Enable the shadow optimization. Currently supports shadow optimization for spot lights and point lights. Shadow optimization for spot lights is done by just turning this on; and there is another property `ShadowPointPCFTexelSize` for shadow optimization for point lights.
 
 ### SAMPLE_FULL_SH_PER_PIXEL
 **Off**: Use Unity's default SH (Spherical Harmonics) sampling strategy, L2 per vertex, L0 and L1 per pixel. ***Default***.
