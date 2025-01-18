@@ -1,18 +1,18 @@
-# Compared to KKUSS Shaders
+# Compared to KKUSS shaders
 
-- [Compared to KKUSS Shaders](#compared-to-kkuss-shaders)
-  - [Properties Changed](#properties-changed)
-  - [Properties Added](#properties-added)
+- [Compared to KKUSS shaders](#compared-to-kkuss-shaders)
+  - [Properties changed](#properties-changed)
+  - [Properties added](#properties-added)
   - [Notes](#notes)
 
-## Properties Changed
+## Properties changed
 - AddColor -> BaseColor
 - SpecularPower -> Glossiness (some KKUSS shaders use `Glossiness`, some others use `SpecularPower`)
 - ShadowPower -> ShadowIntensity
 - Emission -> EmissionMap, EmissionColor, EmissionIntensity
 - Occlusion -> IndirectDiffuseIntensity, IndirectSpecularIntensity
 
-## Properties Added
+## Properties added
 Omitted
 
 ## Notes

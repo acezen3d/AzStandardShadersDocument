@@ -1,6 +1,6 @@
-# Az/StandardHair shader
+# Az/StandardItemCutout shader
 
-- [Az/StandardHair shader](#azstandardhair-shader)
+- [Az/StandardItemCutout shader](#azstandarditemcutout-shader)
   - [Shader compatibility](#shader-compatibility)
     - [Target shaders](#target-shaders)
     - [Renderers](#renderers)
@@ -17,14 +17,14 @@
 ## Shader compatibility
 ### Target shaders
 This shader can be used as a replacement for the following shaders:
-- `Shader Forge/main_hair`
-- `Shader Forge/main_hair_front`
-- `Koikano/hair_main_sun`
-- `Koikano/hair_main_sun_front`
+- `Shader Forge/main_item`
+- `Shader Forge/main_item_studio`
+- `Koikano/main_clothes_item`
 
 ### Renderers
 This shader can be used with the following renderers:
-- Hair
+- Item
+- Studio item
 
 ## Setup
 - RenderType: `TransparentCutout`
@@ -32,17 +32,16 @@ This shader can be used with the following renderers:
 - SrcBlend: `One`
 - DstBlend: `Zero`
 - ZWrite: `On`
-- Queue: `Geometry`
+- Queue: `AlphaTest`
 - Alpha mode keyword: `ALPHATEST_ON`
 
 ## Properties
 ### 🏷️Alpha Clip and Render Options
-| Name               | Type         | Default value | Description                                                                                                                                                      |
-| ------------------ | ------------ | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| AlphaMask          | Texture      | white         | Alpha mask of Koikatsu hair, should be a greyscale texture. The `red` channel will be multiplied with `alpha` channel of `MainTex` to get the final alpha value. |
-| Cutoff             | Float(0,1)   | 0.5           | Alpha clip threshold value. Pixels with an alpha value below this will be clipped.                                                                               |
-| NormalBackFaceFlip | Boolean      | false         | Whether to flip the normals of the back faces.                                                                                                                   |
-| Cull               | Integer(0,2) | 0             | Face culling, 0: cull off, 1: cull front, 2: cull back.                                                                                                          |
+| Name               | Type         | Default value | Description                                                                        |
+| ------------------ | ------------ | ------------- | ---------------------------------------------------------------------------------- |
+| Cutoff             | Float(0,1)   | 0.5           | Alpha clip threshold value. Pixels with an alpha value below this will be clipped. |
+| NormalBackFaceFlip | Boolean      | false         | Whether to flip the normals of the back faces.                                     |
+| Cull               | Integer(0,2) | 0             | Face culling, 0: cull off, 1: cull front, 2: cull back.                            |
 
 ### 🏷️Main PBR
 | Name                                          | Type | Default value | Description |
