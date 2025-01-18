@@ -1,13 +1,13 @@
-# Compared to Unity Standard Shader
+# Compared to Unity Standard shader
 
-- [Compared to Unity Standard Shader](#compared-to-unity-standard-shader)
-  - [Properties Changed](#properties-changed)
-  - [Properties Added](#properties-added)
-  - [Properties Removed](#properties-removed)
-  - [Keywords Removed](#keywords-removed)
+- [Compared to Unity Standard shader](#compared-to-unity-standard-shader)
+  - [Properties changed](#properties-changed)
+  - [Properties added](#properties-added)
+  - [Properties removed](#properties-removed)
+  - [Keywords removed](#keywords-removed)
   - [Notes](#notes)
 
-## Properties Changed
+## Properties changed
 - GlossMapScale -> Glossiness
 - BumpMap -> NormalMap
 - BumpScale -> NormalMapScale
@@ -16,10 +16,10 @@
 - SrcBlend -> BlendSrc
 - DstBlend -> BlendDst
 
-## Properties Added
+## Properties added
 Omitted
 
-## Properties Removed
+## Properties removed
 - ParallaxMap
 - Parallax
 - UVSec
@@ -27,7 +27,7 @@ Omitted
 - SpecularHighlights
 - GlossyReflections
 
-## Keywords Removed
+## Keywords removed
 - NORMALMAP
 - EMISSION
 - METALLICGLOSSMAP

@@ -1,24 +1,23 @@
-# How to Setup Ambient Lighting
+# How to setup ambient lighting
 
-- [How to Setup Ambient Lighting](#how-to-setup-ambient-lighting)
-  - [Ambient Lighting Diffuse Term](#ambient-lighting-diffuse-term)
+- [How to setup ambient lighting](#how-to-setup-ambient-lighting)
+  - [Ambient lighting diffuse term](#ambient-lighting-diffuse-term)
     - [Flat](#flat)
     - [Trilight](#trilight)
     - [Skybox](#skybox)
     - [Custom](#custom)
-  - [Ambient Lighting Specular Term](#ambient-lighting-specular-term)
+  - [Ambient lighting specular term](#ambient-lighting-specular-term)
     - [Skybox](#skybox-1)
     - [Custom](#custom-1)
-  - [How to Get a Skybox Material in Runtime Unity Editor](#how-to-get-a-skybox-material-in-runtime-unity-editor)
-  - [Related: Local Indirect Lighting](#related-local-indirect-lighting)
-    - [Light Probes (Diffuse Term)](#light-probes-diffuse-term)
-    - [Reflection Probe (Specular Term)](#reflection-probe-specular-term)
+  - [How to get a skybox material in Runtime Unity Editor](#how-to-get-a-skybox-material-in-runtime-unity-editor)
+  - [Related: Local indirect lighting](#related-local-indirect-lighting)
+    - [Light Probes (diffuse term)](#light-probes-diffuse-term)
+    - [Reflection Probe (specular term)](#reflection-probe-specular-term)
   - [Notes](#notes)
 
-This article mainly demonstrates how to use most of parameters related to ambient lighting (https://docs.unity3d.com/ScriptReference/RenderSettings.html) of Unity in `Runtime Unity Editor` `REPL` (https://github.com/ManlyMarco/RuntimeUnityEditor).
+This article mainly demonstrates how to use most of parameters related to ambient lighting (https://docs.unity3d.com/ScriptReference/RenderSettings.html) of Unity in Runtime Unity Editor REPL (https://github.com/ManlyMarco/RuntimeUnityEditor).
 
-## Ambient Lighting Diffuse Term
-
+## Ambient lighting diffuse term
 ### Flat
 ```cs
 UnityEngine.RenderSettings.ambientMode = UnityEngine.Rendering.AmbientMode.Flat;
@@ -41,7 +40,7 @@ UnityEngine.DynamicGI.UpdateEnvironment();
 // Intensity control
 UnityEngine.RenderSettings.ambientIntensity = 1.0f;
 ```
-[n1]: See [How to Get a Skybox Material in Runtime Unity Editor](#how-to-get-a-skybox-material-in-runtime-unity-editor).
+[n1]: See [How to get a skybox material in Runtime Unity Editor](#how-to-get-a-skybox-material-in-runtime-unity-editor).
 
 ### Custom
 ```cs
@@ -58,8 +57,7 @@ UnityEngine.RenderSettings.ambientMode = UnityEngine.Rendering.AmbientMode.Custo
 UnityEngine.RenderSettings.ambientProbe = sh;
 ```
 
-## Ambient Lighting Specular Term
-
+## Ambient lighting specular term
 ### Skybox
 ```cs
 UnityEngine.RenderSettings.defaultReflectionMode = UnityEngine.Rendering.DefaultReflectionMode.Skybox;
@@ -90,29 +88,29 @@ UnityEngine.RenderSettings.reflectionIntensity = 1.0f;
 - https://forum.unity.com/threads/loading-skybox-texture-from-disk-at-runtime.667402/#post-4494838
 - https://assetstore.unity.com/packages/tools/utilities/panorama-to-cubemap-13616
 
-## How to Get a Skybox Material in Runtime Unity Editor
+## How to get a skybox material in Runtime Unity Editor
 1. Find a mod item that use `Skybox/Cubemap` shader, like **Az/Skybox/\***, **[Cz]/SkyBox/\***, **nashi/Skybox/\***, etc., place it.
-2. Choose it in the workspace and open `Material Editor` to check the renderer name, like **dome_sphere**.
-3. Search the renderer name in `Runtime Unity Editor` `Object Browser` to find the `GameObject`.
-4. Click `Inspect` to inspect the found `GameObject`, check its `Components`, find the component `UnityEngine.MeshRenderer`, like **dome_sphere (UnityEngine.MeshRenderer)**.
+2. Choose it in the workspace and open Material Editor to check the renderer name, like **dome_sphere**.
+3. Search the renderer name in Runtime Unity Editor Object Browser to find the `GameObject`.
+4. Click **Inspect** to inspect the found `GameObject`, check its **Components**, find the component `UnityEngine.MeshRenderer`, like **dome_sphere (UnityEngine.MeshRenderer)**.
 5. Enter the component `UnityEngine.MeshRenderer`, find the property `material`.
 6. Enter the property `material`.
-   - Right click `material` on the breadcrumbs and choose `Send to REPL`, a line of code will appear in `Runtime Unity Editor` `REPL`, such as `var q = (UnityEngine.Material)InteropTempVar;`.
-   - Or just go to `Runtime Unity Editor` `REPL` and type the code `var q = geti();`.
-7. Click `Run` to run the code in `Runtime Unity Editor` `REPL`.
+   - Right click `material` on the breadcrumbs and choose **Send to REPL**, a line of code will appear in Runtime Unity Editor REPL, such as `var q = (UnityEngine.Material)InteropTempVar;`.
+   - Or just go to Runtime Unity Editor REPL and type the code `var q = geti();`.
+7. Click **Run** to run the code in Runtime Unity Editor REPL.
 8. Now the variable `q` carries our skybox material.
 
-## Related: Local Indirect Lighting
+## Related: Local indirect lighting
 
-### Light Probes (Diffuse Term)
+### Light Probes (diffuse term)
 Baked only  
 https://docs.unity3d.com/ScriptReference/LightProbes.html
 
-### Reflection Probe (Specular Term)
+### Reflection Probe (specular term)
 Baked or realtime  
 https://docs.unity3d.com/ScriptReference/ReflectionProbe.html
 
 ## Notes
 - Ambient lighting requires shader support to work. Az Standard shaders support it of course.
 - The greater the `Glossiness` and `Metallic` of the material, the more pronounced the ambient specular reflections will be. If `Glossiness` and `Metallic` are too small, ambient specular reflections may become invisible.
-- All changes in `Runtime Unity Editor` will not be saved to the scene file, you need to record them yourself.
+- All changes in Runtime Unity Editor will not be saved to the scene file, you need to record them yourself.
