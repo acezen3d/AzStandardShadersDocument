@@ -17,7 +17,7 @@
 | liquidface        | Float(0,2) | 0             | ***Koikatsu property***. Liquid level for the face area, corresponding to `gb` channels of `liquidmask`.          |
 | LiquidFoot        | Float(0,2) | 0             | ⚜️***Extension property***. Liquid level for the foot area, corresponding to `rb` channels of `liquidmask`.        |
 | LiquidAll         | Float(0,2) | 0             | ⚜️***Extension property***. Liquid level for the all areas.                                                        |
-| LiquidBaseColor   | Color      | (1,1,1,1)     | ⚜️***Extension property***. Liquid color tint.                                                                     |
+| LiquidColor       | Color      | (1,1,1,1)     | ⚜️***Extension property***. Liquid color tint.                                                                     |
 | LiquidNormalScale | Float(0,1) | 1             | ⚜️***Extension property***. Liquid normal map scale.                                                               |
 | LiquidMetallic    | Float(0,1) | 0             | ⚜️***Extension property***. Liquid metallic.                                                                       |
 | LiquidGlossiness  | Float(0,1) | 0.8           | ⚜️***Extension property***. Liquid glossiness.                                                                     |
