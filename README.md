@@ -85,6 +85,7 @@ Too many to list, why not experience them firsthand? 😉
   - `SampleFullSHPerPixel`: false
   - `Metallic`: $Metallic_{Unity\ Standard} = {Metallic_{Az/Standard*}} ^ \frac{1} {2.2}$ or $Metallic_{Az/Standard*} = {Metallic_{Unity\ Standard}} ^ {2.2}$.
 - It is recommended to use Material Editor v3.12.0 or later to display the shader property categories introduced in v5.0.0. Additionally, disable **Sort Properties by Type** and **Sort Properties by Name** to match the exact property sorting order in the document.
+- If you encounter issues like missing textures during the migration from v4 to v5, you can download **[Acezen][KK/KKS] Az.Shader.StandardMigrationToV5 v0.0.0.zipmod**. It retains the removed shaders to prevent errors and facilitate the migration. When you have fully migrated to the new v5 shaders, you can safely delete it.
 
 ## Download
 [https://mega.nz/folder/CYtRjKBQ#1SvoZEZCnLxuPs5q56P5Ww](https://mega.nz/folder/CYtRjKBQ#1SvoZEZCnLxuPs5q56P5Ww)
