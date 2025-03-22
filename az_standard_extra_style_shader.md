@@ -36,7 +36,7 @@
 | NormalMapScale        | Float(0,1)  | 1             | Same as `Main PBR/NormalMapScale`.                                                                                    |
 | DetailSet             | Boolean     | true          | Same as `Detail/DetailSet`.                                                                                           |
 | DetailSet2            | Boolean     | false         | Same as `Detail/DetailSet2`.                                                                                          |
-| DetailMask            | Texture     | red           | Same as `Detail/DetailMask`, and it will also provide masking for the matcaps.                                        |
+| DetailMask            | Texture     | red           | Same as `Detail/DetailMask`, and it will also provide masking for the matcap.                                         |
 | DetailUVRotation      | Float(-1,1) | 0             | Same as `Detail/DetailUVRotation`.                                                                                    |
 | DetailUVRotation2     | Float(-1,1) | 0             | Same as `Detail/DetailUVRotation2`.                                                                                   |
 | NormalMapDetail       | Texture     | bump          | Same as `Detail/NormalMapDetail`.                                                                                     |
@@ -68,26 +68,26 @@
 | IndirectLightToRimLight | Float(0,1)  | 0             | Blends the indirect light to the rim light.                                                                                                           |
 
 ### 🏷️Matcap
-| Name                       | Type          | Default value | Description                                                                                                                                     |
-| -------------------------- | ------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| Matcap                     | Boolean       | true          | Whether to enable the matcap.                                                                                                                   |
-| MatcapTex                  | Texture       | black         | Matcap texture of detail set 1.                                                                                                                 |
-| MatcapColor                | Color         | (1,1,1,1)     | Matcap color of detail set 1.                                                                                                                   |
-| MatcapTex2                 | Texture       | black         | Matcap texture of detail set 2.                                                                                                                 |
-| MatcapColor2               | Color         | (1,1,1,1)     | Matcap color of detail set 2.                                                                                                                   |
-| MatcapMask                 | Texture       | white         | Matcap mask, `red` channel for detail set 1, `green` channel for detail set 2.                                                                  |
-| MatcapMaskLevel            | Float(-1,1)   | 0             | Matcap 1 mask level. -1: fully masked; 0: as defined by the mask texture; 1: fully unmasked.                                                    |
-| MatcapMaskLevel2           | Float(-1,1)   | 0             | Matcap 2 mask level. -1: fully masked; 0: as defined by the mask texture; 1: fully unmasked.                                                    |
-| MatcapUVRotation           | Float(-1,1)   | 0             | Matcap 1 UV rotation in units of $\pi$.                                                                                                         |
-| MatcapUVRotation2          | Float(-1,1)   | 0             | Matcap 2 UV rotation in units of $\pi$.                                                                                                         |
-| MatcapBlurLevel            | Integer(0,10) | 0             | Matcap 1 blur level (mipmap level).                                                                                                             |
-| MatcapBlurLevel2           | Integer(0,10) | 0             | Matcap 2 blur level (mipmap level).                                                                                                             |
-| MatcapCancelCameraRolling  | Boolean       | true          | Matcap reflection settings, same as `CameraRolling_Stabilizer` in Unity Toon Shader.                                                            |
-| MatcapReflectionAdjustment | Boolean       | false         | Matcap reflection settings, used to adjust/optimize the matcap in reflections.                                                                  |
-| MatcapUVMethod             | Integer(0,4)  | 2             | See [Additional property description/MatcapUVMethod](#matcapuvmethod).                                                                          |
-| MainLightToMatcap          | Vector        | (0,2,0,2)     | Blends and applies the mask of the main light to the matcaps. Also see [Additional property description/MainLightToMatcap](#mainlighttomatcap). |
-| IndirectLightToMatcap      | Float(0,1)    | 0             | Blends the indirect light to the matcaps.                                                                                                       |
-| MatcapAddOrMultiply        | Integer(0,1)  | 0             | How the matcaps will be blended, 0: add, 1: multiply.                                                                                           |
+| Name                       | Type          | Default value | Description                                                                                                                                    |
+| -------------------------- | ------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| Matcap                     | Boolean       | true          | Whether to enable the matcap.                                                                                                                  |
+| MatcapTex                  | Texture       | black         | Matcap texture of detail set 1.                                                                                                                |
+| MatcapColor                | Color         | (1,1,1,1)     | Matcap color of detail set 1.                                                                                                                  |
+| MatcapTex2                 | Texture       | black         | Matcap texture of detail set 2.                                                                                                                |
+| MatcapColor2               | Color         | (1,1,1,1)     | Matcap color of detail set 2.                                                                                                                  |
+| MatcapMask                 | Texture       | white         | Matcap mask, `red` channel for detail set 1, `green` channel for detail set 2.                                                                 |
+| MatcapMaskLevel            | Float(-1,1)   | 0             | Matcap 1 mask level. -1: fully masked; 0: as defined by the mask texture; 1: fully unmasked.                                                   |
+| MatcapMaskLevel2           | Float(-1,1)   | 0             | Matcap 2 mask level. -1: fully masked; 0: as defined by the mask texture; 1: fully unmasked.                                                   |
+| MatcapUVRotation           | Float(-1,1)   | 0             | Matcap 1 UV rotation in units of $\pi$.                                                                                                        |
+| MatcapUVRotation2          | Float(-1,1)   | 0             | Matcap 2 UV rotation in units of $\pi$.                                                                                                        |
+| MatcapBlurLevel            | Integer(0,10) | 0             | Matcap 1 blur level (mipmap level).                                                                                                            |
+| MatcapBlurLevel2           | Integer(0,10) | 0             | Matcap 2 blur level (mipmap level).                                                                                                            |
+| MatcapCancelCameraRolling  | Boolean       | true          | Whether to keep the matcap stationary when the camera rolls, identical to `CameraRolling_Stabilizer` in Unity Toon Shader.                     |
+| MatcapReflectionAdjustment | Boolean       | false         | Used to adjust whether the matcap is mirrored horizontally or vertically when facing forward in the reflections.                               |
+| MatcapUVMethod             | Integer(0,4)  | 2             | See [Additional property description/MatcapUVMethod](#matcapuvmethod).                                                                         |
+| MainLightToMatcap          | Vector        | (0,2,0,2)     | Blends and applies the mask of the main light to the matcap. Also see [Additional property description/MainLightToMatcap](#mainlighttomatcap). |
+| IndirectLightToMatcap      | Float(0,1)    | 0             | Blends the indirect light to the matcap.                                                                                                       |
+| MatcapAddOrMultiply        | Integer(0,1)  | 0             | How the matcap will be blended, 0: add, 1: multiply.                                                                                           |
 
 ### 🏷️Tessellation
 | Name                                                  | Type | Default value | Description |
@@ -148,7 +148,7 @@ Rim light static rotation. The rim light rotates in view space, following ZXY-or
 - `alpha`: The power of Half Lambert to determine the range for masking the rim light. Value range: $[0,\infty)$, typically $[0,10]$.
 
 ### MatcapUVMethod
-Controls the generation of the Matcap UVs, thus affecting the sampling of the matcap texture.
+Controls the generation of the Matcap UVs, thus affecting the sampling of the matcap textures.
 
 **Value: 0**
 - ***Orthographic***. This is the most conventional sampling, but it will have problems such as edge distortion. 
@@ -166,10 +166,10 @@ Controls the generation of the Matcap UVs, thus affecting the sampling of the ma
 - ***RNM Blending***. Perturbation of the view space normal direction using the RNM normal blending. Unity Toon Shader's approach.
 
 ### MainLightToMatcap
-- `red`: Blends the main light to the matcaps. Value range: $[0,1]$.  
-- `green`: The power of Half Lambert to determine the range for blending the main light to the matcaps. Value range: $[0,\infty)$, typically $[0,10]$.
-- `blue`: Applies the mask based on the main light direction to the matcaps. Value range: $[-1,1]$. Negative values will invert the mask.
-- `alpha`: The power of Half Lambert to determine the range for masking the matcaps. Value range: $[0,\infty)$, typically $[0,10]$.
+- `red`: Blends the main light to the matcap. Value range: $[0,1]$.  
+- `green`: The power of Half Lambert to determine the range for blending the main light to the matcap. Value range: $[0,\infty)$, typically $[0,10]$.
+- `blue`: Applies the mask based on the main light direction to the matcap. Value range: $[-1,1]$. Negative values will invert the mask.
+- `alpha`: The power of Half Lambert to determine the range for masking the matcap. Value range: $[0,\infty)$, typically $[0,10]$.
 
 ## Notes
 - Materials using `Az/StandardExtraStyle` generally cannot exist independently; it is merely an overlay, providing additional stylized rendering, just as its name suggests. Therefore, you first need a base material, such as one using other Az Standard shaders, and then apply `Az/StandardExtraStyle` by duplicating the material. Also make sure that `RenderQueue` is set higher than the base material.
