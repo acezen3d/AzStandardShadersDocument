@@ -138,7 +138,7 @@
 
 ## v4.5.0
 - Add `HighlightLevel`, `UseOverColor`, `IgnoreOverTexUV` to `Az/StandardEye`. Check the document for more details.
-- Optimize the blending logic of the eye highlight area (`overtex1` and `overtex2`), make it consistent with the game.
+- Optimize the blending logic of the eye highlight areas (`overtex1` and `overtex2`), make it consistent with the game.
 - Update the document.
 
 ## v4.6.0
@@ -209,4 +209,11 @@
 ## v5.1.0
 - Rename `LiquidBaseColor` to `LiquidColor`.
 - Optimize the distribution of `LiquidMetallic` and `LiquidGlossiness`.
+- Update the document.
+
+## v5.2.0
+- Add `Az/StandardLiteCutout` and `Az/StandardLiteAlpha` shaders. They're lite versions of the cloth and item shaders, requested by ***AhaNubis*** and ***Starstorm***.
+- Fix the issue that the eyes lost the highlight areas (`overtex1` and `overtex2`) when `IgnoreOverTexUV` is 0.
+- Fix `MatcapCancelCameraRolling` not working properly in `Az/StandardExtraStyle`.
+- Change the render type and default render queue of `Az/StandardExtraStyle`.
 - Update the document.

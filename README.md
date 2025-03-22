@@ -1,5 +1,5 @@
 # Az Standard shaders
-v5.1.0
+v5.2.0
 
 - [Az Standard shaders](#az-standard-shaders)
   - [Introduction](#introduction)
@@ -43,6 +43,8 @@ I referenced Vanilla Plus shader code for many game-related parts, so special th
 |                        |            | Koikano/main_clothes_opaque         |                                               |
 | Az/StandardClothAlpha  | -          | Shader Forge/main_alpha             | xukmi/MainAlphaPlus(Tess)                     |
 |                        |            | Koikano/main_clothes_alpha          |                                               |
+| Az/StandardLiteCutout  | -          | -                                   | -                                             |
+| Az/StandardLiteAlpha   | -          | -                                   | -                                             |
 | Az/StandardExtraStyle  | -          | -                                   | -                                             |
 | Az/StandardDebug       | -          | -                                   | xukmi/Debug/WireframeTess                     |
 
@@ -62,6 +64,8 @@ Too many to list, why not experience them firsthand? 😉
 - [Az/StandardItemAlpha shader](az_standard_item_alpha_shader.md)
 - [Az/StandardClothCutout shader](az_standard_cloth_cutout_shader.md)
 - [Az/StandardClothAlpha shader](az_standard_cloth_alpha_shader.md)
+- [Az/StandardLiteCutout shader](az_standard_lite_cutout_shader.md)
+- [Az/StandardLiteAlpha shader](az_standard_lite_alpha_shader.md)
 - [Az/StandardExtraStyle shader](az_standard_extra_style_shader.md)
 - [Az/StandardDebug shader](az_standard_debug_shader.md)
 
