@@ -222,3 +222,6 @@
 - Add back `DummyAmbient` removed from v5.0.0 as requested by ***Coppersocket***. It may still be deprecated in future versions. Please minimize its usage.
 - Additionally, note that `IndirectLightToRimLight` and `IndirectLightToMatcap` in `Az/StandardExtraStyle`, as well as `IndirectDiffuseIntensity` and `IndirectSpecularIntensity` in the lighting properties, refer to the real indirect light in Unity.
 - Update the document.
+
+## v5.3.1
+- Fix the two matcaps not blending correctly in `Az/StandardExtraStyle`.
