@@ -1,5 +1,5 @@
 # Az Standard shaders
-v5.2.0
+v5.3.0
 
 - [Az Standard shaders](#az-standard-shaders)
   - [Introduction](#introduction)
@@ -86,6 +86,7 @@ Too many to list, why not experience them firsthand? 😉
   - `IndirectDiffuseIntensity`: 1
   - `IndirectSpecularIntensity`: 1
   - `ShadowTransitionPower`: 0
+  - `DummyAmbient`: (0,0,0,1)
   - `SampleFullSHPerPixel`: false
   - `Metallic`: $Metallic_{Unity\ Standard} = {Metallic_{Az/Standard*}} ^ \frac{1} {2.2}$ or $Metallic_{Az/Standard*} = {Metallic_{Unity\ Standard}} ^ {2.2}$.
 - It is recommended to use Material Editor v3.12.0 or later to display the shader property categories introduced in v5.0.0. Additionally, disable **Sort Properties by Type** and **Sort Properties by Name** to match the exact property sorting order in the document.
