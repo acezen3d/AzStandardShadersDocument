@@ -225,3 +225,6 @@
 
 ## v5.3.1
 - Fix the two matcaps not blending correctly in `Az/StandardExtraStyle`.
+
+## v5.3.2
+- Remove the intentional ignoring of the offset and tiling for `Texture2` and `Texture3` to fix the issue where certain plugins in Koikatsu attempt to manipulate them but have no effect.
