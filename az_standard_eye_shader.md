@@ -90,9 +90,15 @@ The albedo boost level of highlight areas (`overtex1` and `overtex2`). The defau
 > This is a major compromise I made for cartoon eyes. The flat eye mesh can't produce specular highlights (even with a normal map, it doesn’t match the painted cartoon highlights) similar to the spherical eyeballs of a real human. So we can only choose to fake it and fake it better.
 
 ### UseOverColor
-Whether to allow `overcolor1` and `overcolor2` to control the colors of `overtex1` and `overtex2`. The default value is 1, it's consistent with the game. If the value is 0, it only means that `rgb` values of `overcolor1` and `overcolor2` are not used, but the colors of `overtex1` and `overtex2` themselves are used.
+Whether to use `overcolor1` and `overcolor2` to control the highlight colors.
 
-Note that `alpha` channel of `overcolor1` and `overcolor2` always works and participates in controlling the transparency of `overtex1` and `overtex2`.
+**Value: 0**
+- Use `rgb` values of `overcolor1` and `overcolor2` as the highlight colors. Default, consistent with the game.
+
+**Value: 1**
+- Don't use `rgb` values of `overcolor1` and `overcolor2`; instead, use the original colors of `overtex1` and `overtex2`.
+
+Note that `alpha` channel of `overcolor1` and `overcolor2` always functions and contributes to controlling the transparency of `overtex1` and `overtex2`.
 
 ### IgnoreOverTexUV
 Koikatsu built-in (and Vanilla Plus) eye shader uses UV1 and UV2 to sample `overtex1` and `overtex2` respectively. UV1 and UV2 are identical, but slightly different from UV0 which is used by `MainTex` for sampling. This difference is noticeable when you use custom textures and look closely. My guess is that this is designed to provide some parallax to the highlights of the eyes. If you need `overtex1` and `overtex2` to be perfectly aligned with `MainTex`, you should turn this on, then UV1 and UV2 will be ignored, `overtex1` and `overtex2` will be sampled using UV0.
