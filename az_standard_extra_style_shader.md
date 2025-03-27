@@ -103,10 +103,10 @@
 ### UseCustomMainLight 
 Whether to use the custom main light.
 
-**Value: 0**
+**Value: false**
 - Use the main light in the scene; if unavailable, fall back to the custom main light.
 
-**Value: 1**  
+**Value: true**
 - Always use the custom main light defined by `CustomMainLightDirection` and `CustomMainLightColor`, regardless of the main light in the scene.
 
 The custom main light settings (`CustomMainLightDirection` and `CustomMainLightColor`) are inspired by and optimized from the so-called built-in main light in Unity Toon Shader, enabling users to define their own custom main light. This `UseCustomMainLight` switch allows features to ignore the main light in the scene and use the custom main light instead, preventing unwanted lighting jumps caused by the switching of the main light during light animations. Further explanation is not provided here due to text limitations.
